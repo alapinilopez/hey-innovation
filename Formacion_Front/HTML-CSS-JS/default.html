@@ -13,7 +13,7 @@
     <header>
         <h1>Bienvenido a nuestra página web</h1>
     </header>
-    
+
     <main>
         <div class="displayError"></div>
         <!-- Tabla que contiene otra tabla con un formulario básico    -->
@@ -31,7 +31,7 @@
                                     <br><input type="password" name="pwd" id="pwd">
                                     <br>
                                     <br>
-                                    <input type="submit" value="Aceptar" id="boton">
+                                    <input type="submit" value="Aceptar" id="boton" onclick="validatePwd()">
                             </td>
                         </tr>
                     </table>
@@ -43,7 +43,32 @@
         <button onclick="newWindow()">Hola Mundo</button>
     </main>
 
-    <script src="/hey-innovation/Formacion_Front/HTML-CSS-JS/javascript/default.js"></script>
+    <script>
+        function newWindow() {
+            window.open("/hey-innovation/Formacion_Front/HTML-CSS-JS/holaMundo.html", "targetWindow", "height=320px, width=150px")
+        }
+
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            var emailRegex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+            
+            if (!(emailRegex.test(email))) {
+                return document.getElementsByClassName("displayError").style.display = "block";
+            } else {
+                alert("Email correcto");
+            }
+        }
+        
+        function validatePwd()
+        let pwd = document.getElementById("pwd").value;
+        var pwdRegex = /^[A-Za-z]\w{4,}$(?=.*\d)/;
+
+        if (pwd.value.match(pwdRegex)) {
+            alert("Contraseña aceptada")
+        } else {
+            document.getElementsByClassName("displayError").style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
