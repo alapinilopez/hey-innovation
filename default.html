@@ -1,49 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-
-        #first-table-schema {
-            width: 790px;
-            height: 500px;
-            background-color: #F2EBD9;
-            border: 1px solid #003281;
-        }
-
-        #second-table-schema {
-            background-color: #003281;
-            color: white;
-            border: 1px solid black;
-        }
-
-    </style>
-
+    <title>Default</title>
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
-
-    <table id="first-table-schema">
-        <td id="second-table-schema">
-            <table id="second-table-schema">
-                <label for="e-mail">E-mail</label>
-                <br>
-                <input type="email" name="e-mail" size="30">
-                <br>
-                <label for="e-mail">Contraseña</label>
-                <br>
-                <input type="password" name="e-mail" >
-                <br>
-                <button type="button">Aceptar</button>
-            </table>
-        </td>
-    </table>
-
+    <header>
+        <h1>Bienvenido a nuestra página web</h1>
+    </header>
+    
+    <main>
+        <div class="displayError"></div>
+        <!-- Tabla que contiene otra tabla con un formulario básico    -->
+        <table id="container">
+            <tr>
+                <td>
+                    <table id="content">
+                        <tr>
+                            <td>
+                                <form action="" id="form">
+                                    <label for="email">E-mail</label>
+                                    <br><input type="email" name="email" id="email">
+                                    <br>
+                                    <label for="pwd">Contraseña</label>
+                                    <br><input type="password" name="pwd" id="pwd">
+                                    <br>
+                                    <br>
+                                    <input type="submit" value="Aceptar">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            </form>
+        </table>
+    </main>
 </body>
 
 </html>
