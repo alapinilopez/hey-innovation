@@ -15,7 +15,7 @@
     </header>
 
     <main>
-        <div class="displayError"></div>
+        <div id="displayError"></div>
         <!-- Tabla que contiene otra tabla con un formulario básico    -->
         <table id="container">
             <tr>
@@ -31,7 +31,7 @@
                                     <br><input type="password" name="pwd" id="pwd">
                                     <br>
                                     <br>
-                                    <input type="submit" value="Aceptar" id="boton" onclick="validatePwd()">
+                                    <input type="submit" value="Aceptar" onclick="validatePwd()">
                             </td>
                         </tr>
                     </table>
@@ -49,25 +49,33 @@
         }
 
         function validateEmail() {
-            let email = document.getElementById("email").value;
+            let email = document.getElementById("email").click();
             var emailRegex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
             
             if (!(emailRegex.test(email))) {
-                return document.getElementsByClassName("displayError").style.display = "block";
+                return document.getElementsById("displayError").style.display = "block";
             } else {
                 alert("Email correcto");
             }
         }
         
-        function validatePwd()
-        let pwd = document.getElementById("pwd").value;
+        function validatePwd(){
+        let pwd = document.getElementById("pwd").click();
         var pwdRegex = /^[A-Za-z]\w{4,}$(?=.*\d)/;
 
-        if (pwd.value.match(pwdRegex)) {
-            alert("Contraseña aceptada")
-        } else {
-            document.getElementsByClassName("displayError").style.display = "block";
+        if (pwd == null || pwd ==""){
+            alert("foo");
+            return false;
+        }else if(pwd.length < 6 && isNaN(pwd)) {
+            alert("correcto");
+            return false;
         }
+        // if (pwd.value.match(pwdRegex)) {
+        //     alert("Contraseña aceptada")
+        // } else {
+        //     document.getElementById("displayError").style.display = "block";
+        // }
+    }
     </script>
 </body>
 

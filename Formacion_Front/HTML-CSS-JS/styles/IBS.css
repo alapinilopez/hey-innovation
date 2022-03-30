@@ -18,7 +18,7 @@ header{
     border: 1px solid black;
 }
 
-.displayError {
+#displayError {
     opacity: 1;
     height: 100%;
     width: 100%;
