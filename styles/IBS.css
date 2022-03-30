@@ -29,3 +29,25 @@ header{
     background-color: white;
     border: 1px solid red;
 }
+
+#small {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    font-size: 10px;
+    color:white;
+}
+
+#smallrojo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    font-size: 10px;
+    color: red;
+}
+
+#boton {
+    cursor: pointer;
+    border: 2px solid skyblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-style: bold;
+}
