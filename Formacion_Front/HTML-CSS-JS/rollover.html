@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROLLOVER</title>
+</head>
+<body>
+    <main>
+        <img src="/hey-innovation/Formacion_Front/HTML-CSS-JS/images/yamcha.png" alt="Yamcha" id="image" onmouseout="starndarImage()" onmouseover="midImage()" onclick="clickImage()">
+    </main>
+
+    <script>
+        function standardImage() {
+            document.getElementById("image").src = "/hey-innovation/Formacion_Front/HTML-CSS-JS/images/yamcha.png"
+        }
+
+        function midImage() {
+            document.getElementById("image").src = "/hey-innovation/Formacion_Front/HTML-CSS-JS/images/yamchaSaibaman.png"
+        }
+
+        function clickImage() {
+            document.getElementById("image").src = "/hey-innovation/Formacion_Front/HTML-CSS-JS/images/yamchaCrater.jfif"
+        }
+    </script>
+</body>
+</html>

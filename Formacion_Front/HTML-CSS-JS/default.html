@@ -15,7 +15,6 @@
     </header>
 
     <main>
-        <div id="displayError"></div>
         <!-- Tabla que contiene otra tabla con un formulario básico    -->
         <table id="container">
             <tr>
@@ -25,14 +24,15 @@
                             <td>
                                 <form action="" id="small">
                                     <label for="email">E-mail</label>
-                                    <br><input type="email" name="email" id="email" required>
+                                    <br><input type="email" name="email" id="email">
                                     <br>
                                     <label for="pwd">Contraseña</label>
-                                    <br><input type="password" name="pwd" id="pwd"
-                                        pattern="(?=.*\d)(?=.*[A-Za-z]).{4,}" title="La contraseña debe ser superior a 4 caracteres y debe contener, al menos, un número" required>
+                                    <br><input type="password" name="pwd" id="password" 
+                                        title="La contraseña debe ser superior a 4 caracteres y debe contener, al menos, un número">
                                     <br>
                                     <br>
-                                    <input type="submit" value="Aceptar" onclick="validatePwd()">
+                                    <input type="submit" value="Aceptar" onclick="applyValidation()">
+                                    <div id="displayError">Ha habido un error</div>
                             </td>
                         </tr>
                     </table>
@@ -41,82 +41,39 @@
             </form>
         </table>
 
-        <div id="message">
-            <h3>Password must contain the following:</h3>
-            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-            <p id="number" class="invalid">A <b>number</b></p>
-            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-          </div>
-
-          https://www.w3schools.com/howto/howto_js_password_validation.asp
-
         <button onclick="newWindow()">Hola Mundo</button>
     </main>
 
     <script>
-        myInput.onkeyup = function pwdValidation () {
-            // Validate lowercase letters
-            var letters = /[A-Za-z]/g;
-            if (myInput.value.match(lowerCaseLetters)) {
-                letter.classList.remove("invalid");
-                letter.classList.add("valid");
-            } else {
-                letter.classList.remove("valid");
-                letter.classList.add("invalid");
+        function applyValidation() {
+            var displayError = document.getElementById("displayError");
+            const validEmailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            const validPasswordRegex = /^((?=.*\d).{4,})$/;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            const flags = new Map([
+                ["email", false],
+                ["password", false]
+            ])
+            if (validEmailRegex.test(email)) {
+                flags.set("email", true);
             }
-
-            // Validate numbers
-            var numbers = /[0-9]/g;
-            if (myInput.value.match(numbers)) {
-                number.classList.remove("invalid");
-                number.classList.add("valid");
-            } else {
-                number.classList.remove("valid");
-                number.classList.add("invalid");
+            if (validPasswordRegex.test(password)) {
+                flags.set("password", true);
             }
-
-            // Validate length
-            if (myInput.value.length >= 4) {
-                length.classList.remove("invalid");
-                length.classList.add("valid");
-            } else {
-                length.classList.remove("valid");
-                length.classList.add("invalid");
+            for (let [key, value] of flags.entries()) {
+                if (value == false) {
+                    return displayError.style.display = "block";
+                }
+            }
+            if (value == true) {
+                return displayError.style.display = "none";
             }
         }
+
         function newWindow() {
             window.open("/hey-innovation/Formacion_Front/HTML-CSS-JS/holaMundo.html", "targetWindow", "height=320px, width=150px")
         }
-
-        // function validateEmail() {
-        //     let email = document.getElementById("email").click();
-        //     var emailRegex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
-
-        //     if (!(emailRegex.test(email))) {
-        //         return document.getElementsById("displayError").style.display = "block";
-        //     } else {
-        //         alert("Email correcto");
-        //     }
-        // }
-
-        // function validatePwd() {
-        //     let pwd = document.getElementById("pwd").click();
-        //     var pwdRegex = /^[A-Za-z]\w{4,}$(?=.*\d)/;
-
-        //     if (pwd == null || pwd == "") {
-        //         alert("foo");
-        //         return false;
-        //     } else if (pwd.length < 6 && isNaN(pwd)) {
-        //         alert("correcto");
-        //         return false;
-        //     }
-        //     // if (pwd.value.match(pwdRegex)) {
-        //     //     alert("Contraseña aceptada")
-        //     // } else {
-        //     //     document.getElementById("displayError").style.display = "block";
-        //     // }
-        // }
     </script>
 </body>
 

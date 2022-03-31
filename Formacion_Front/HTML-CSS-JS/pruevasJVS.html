@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas JVS</title>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <input type="checkbox" name="paco" id="paco"><label for="">Paco Pepe</label>
+            <br>
+            <input type="checkbox" name="marcos" id="marcos"><label for="">Marcos Heredia</label>
+            <br>
+            <input type="checkbox" name="oliver" id="oliver"><label for="">Oliver Atom</label>
+        </form>
+
+        <button onclick="nameCheckBoxes()">Ver checks</button>
+
+        <script>
+            function nameCheckBoxes() {
+                const boxes = document.querySelectorAll('input[type=checkbox]:checked');
+                let boxesValue = ""
+                for (var i = 0; i > boxes.length; i++) {
+                    boxesValue += boxes[i].value;
+                }
+                if (boxesValue.length != 0) {
+                    return alert("Betis");
+                }else {
+                    return alert("Seleccione alguna casilla");
+                }
+            }
+
+            function getCheckedBoxes() {
+                const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+                var selectedBoxes = ""
+                for (var i = 0; i < checkboxes.length; i++) {
+                    selectedBoxes += checkboxes[i].value + "\n"
+                }
+                if (checkboxes.length != 0) {
+                    return alert(selectedBoxes)
+                } else {
+                    return alert("No vehicle selected")
+                }
+            }
+        </script>
+    </main>
+</body>
+
+</html>
