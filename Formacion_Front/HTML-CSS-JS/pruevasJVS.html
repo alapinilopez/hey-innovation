@@ -11,17 +11,30 @@
 <body>
     <main>
         <form action="">
-            <input type="checkbox" name="paco" id="paco"><label for="">Paco Pepe</label>
+            <input type="checkbox" name="paco" id="paco" value="Paco Pepe"><label for="">Paco Pepe</label>
             <br>
-            <input type="checkbox" name="marcos" id="marcos"><label for="">Marcos Heredia</label>
+            <input type="checkbox" name="marcos" id="marcos" value="Marcos Heredia"><label for="">Marcos Heredia</input>
             <br>
-            <input type="checkbox" name="oliver" id="oliver"><label for="">Oliver Atom</label>
+            <input type="checkbox" name="oliver" id="oliver" value="Oliver Atom">Oliver Atom</input>
+            <br>
+            <input type="submit" value="CheckBoxes" onclick="getBoxes()">
+            <br><br>
+            <!-- Obtener el valor de un solo radio y hacerle un alert -->
+            <input type="radio" name="car" id="audi" value="Audi">Audi</input>
+            <br>
+            <input type="radio" name="car" id="ford" value="Ford">Ford
+            <br>
+            <input type="radio" name="car" id="seat" value="Seat"><label for="seat">Seat</label>
+            <br>
+            <input type="radio" name="car" id="fiat" value="Fiat"><label for="fiat">Fiat</label>
+            <br>
+            <input type="radio" name="car" id="dacia" value="Dacia"><label for="dacia">Dacia</label>
+            <br>
+            <input type="submit" value="Radio" onclick="getRadio()">
         </form>
 
-        <button onclick="nameCheckBoxes()">Ver checks</button>
-
         <script>
-            function nameCheckBoxes() {
+            function getBoxes() {
                 const boxes = document.querySelectorAll('input[type=checkbox]:checked');
                 let boxesValue = ""
                 for (var i = 0; i > boxes.length; i++) {
@@ -44,6 +57,15 @@
                     return alert(selectedBoxes)
                 } else {
                     return alert("No vehicle selected")
+                }
+            }
+
+            function getRadio() {
+                var radio = document.querySelector('input[type=radio]:checked')
+                if (!radio) {
+                    alert("klk");
+                }else {
+                    alert(radio.value);
                 }
             }
         </script>
