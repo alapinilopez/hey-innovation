@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas JVS</title>
+    <link rel="stylesheet" href="/hey-innovation/Formacion_Front/HTML-CSS-JS/styles/mostrar_ocultar.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <!-- Scripts de jquery -->
+    <script>
+        $(document).ready(function(){
+            $("#hello").on("click", function(){
+                // Nueva ventana
+                window.open("https://www.marca.com/futbol.html","holaMundo","height=790", "width=500px");
+            })
+
+            $("#email").keyup(function() {
+                var VAL = this.value;
+                var email = new RegExp('^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$');
+
+                if(email.test(VAL)) {
+                    return alert("Email validado");
+                }
+            });
+        });
+    </script>
+    <main>
+        <!-- Nueva venta -->
+        <button id="hello">New Window</button>
+        <!-- Validar formulario -->
+        <form action="" id="small">
+            <label for="email">E-mail</label>
+            <br><input type="email" name="email" id="email">
+            <br>
+            <label for="pwd">Contraseña</label>
+            <br><input type="password" name="pwd" id="password" 
+                title="La contraseña debe ser superior a 4 caracteres y debe contener, al menos, un número">
+            <br>
+            <br>
+            <input type="submit" value="Aceptar">
+        </form>
+        <!-- Formularios "interactivos" -->
+        <form action="">
+            <input type="checkbox" name="paco" id="paco" value="Paco Pepe">Paco Pepe</input>
+            <br>
+            <input type="checkbox" name="marcos" id="marcos" value="Marcos Heredia">Marcos Heredia</input>
+            <br>
+            <input type="checkbox" name="oliver" id="oliver" value="Oliver Atom">Oliver Atom</input>
+            <br>
+            <input type="submit" value="CheckBoxes" onclick="getBoxes()">
+            <br><br>
+            <!-- Obtener el valor de un solo radio y hacerle un alert -->
+            <input type="radio" name="car" id="audi" value="Audi">Audi</input>
+            <br>
+            <input type="radio" name="car" id="ford" value="Ford">Ford</input>
+            <br>
+            <input type="radio" name="car" id="seat" value="Seat">Seat</input>
+            <br>
+            <input type="radio" name="car" id="fiat" value="Fiat">Fiat</input>
+            <br>
+            <input type="radio" name="car" id="dacia" value="Dacia">Dacia</input>
+            <br>
+            <input type="submit" value="Radio" onclick="getRadio()">
+        </form>
+        <!-- Mostrar y ocultar elementos -->
+        <div id="relative">
+                <div id="shownElement"><img src="/hey-innovation/Formacion_Front/HTML-CSS-JS/images/eevee.png" alt="Eevee"
+                        onclick="hideElement()"></div>
+                <div id="hiddenElement"><img src="/hey-innovation/Formacion_Front/HTML-CSS-JS/images/umbreon.png"
+                        alt="Umbreon" onclick="revealElement()"></div>
+        </div>
+        <br><br>
+        <!-- Menú desplegable -->
+        <div>
+            <select name="option" id="optionA" onclick="dropdown()">
+                <option value="Opción 1 A">Opción 1 A</option>
+                <option value="Opción 2 A">Opción 2 A</option>
+                <option value="Opción 3 A">Opción 3 A</option>
+                <option value="Opción 4 A">Opción 4 A</option>
+                <option value="Opción 5 A">Opción 5 A</option>
+                <option value="Opción 6 A">Opción 6 A</option>
+            </select>
+            <select name="option" id="optionB">
+                <option value="Opción 1 B">Opción 1 B</option>
+                <option value="Opción 2 B">Opción 2 B</option>
+                <option value="Opción 3 B">Opción 3 B</option>
+                <option value="Opción 4 B">Opción 4 B</option>
+            </select>
+        </div>
+        <!-- Carga de jquery al proyecto -->
+        
+
+</html>
