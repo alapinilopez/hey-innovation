@@ -1,0 +1,9 @@
+#shownElement {
+    display: block;
+    position: absolute;
+}
+
+#hiddenElement {
+    display: none;
+    position: absolute;
+}

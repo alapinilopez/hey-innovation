@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pruebas JVS</title>
+    <link rel="stylesheet" href="/hey-innovation/Formacion_Front/HTML-CSS-JS/styles/mostrar_ocultar.css">
 </head>
 
 <body>
     <main>
+        <!-- Formularios "interactivos" -->
         <form action="">
-            <input type="checkbox" name="paco" id="paco" value="Paco Pepe"><label for="">Paco Pepe</label>
+            <input type="checkbox" name="paco" id="paco" value="Paco Pepe">Paco Pepe</input>
             <br>
-            <input type="checkbox" name="marcos" id="marcos" value="Marcos Heredia"><label for="">Marcos Heredia</input>
+            <input type="checkbox" name="marcos" id="marcos" value="Marcos Heredia">Marcos Heredia</input>
             <br>
             <input type="checkbox" name="oliver" id="oliver" value="Oliver Atom">Oliver Atom</input>
             <br>
@@ -22,51 +24,82 @@
             <!-- Obtener el valor de un solo radio y hacerle un alert -->
             <input type="radio" name="car" id="audi" value="Audi">Audi</input>
             <br>
-            <input type="radio" name="car" id="ford" value="Ford">Ford
+            <input type="radio" name="car" id="ford" value="Ford">Ford</input>
             <br>
-            <input type="radio" name="car" id="seat" value="Seat"><label for="seat">Seat</label>
+            <input type="radio" name="car" id="seat" value="Seat">Seat</input>
             <br>
-            <input type="radio" name="car" id="fiat" value="Fiat"><label for="fiat">Fiat</label>
+            <input type="radio" name="car" id="fiat" value="Fiat">Fiat</input>
             <br>
-            <input type="radio" name="car" id="dacia" value="Dacia"><label for="dacia">Dacia</label>
+            <input type="radio" name="car" id="dacia" value="Dacia">Dacia</input>
             <br>
             <input type="submit" value="Radio" onclick="getRadio()">
         </form>
-
+        <!-- Mostrar y ocultar elementos -->
+        <!-- <div id="relative">
+            <div id="shownElement"><img src="/hey-innovation/Formacion_Front/HTML-CSS-JS/images/eevee.png" alt="Eevee"
+                    onclick="hideElement()"></div>
+            <div id="hiddenElement"><img src="/hey-innovation/Formacion_Front/HTML-CSS-JS/images/umbreon.png"
+                    alt="Umbreon" onclick="revealElement()"></div> -->
+        </div>
+        <br><br>
+        <!-- Menú desplegable -->
+        <div>
+            <select name="option" id="optionA" onclick="dropdown()">
+                <option value="Opción 1 A">Opción 1 A</option>
+                <option value="Opción 2 A">Opción 2 A</option>
+                <option value="Opción 3 A">Opción 3 A</option>
+                <option value="Opción 4 A">Opción 4 A</option>
+                <option value="Opción 5 A">Opción 5 A</option>
+                <option value="Opción 6 A">Opción 6 A</option>
+            </select>
+            <select name="option" id="optionB">
+                <option value="Opción 1 B">Opción 1 B</option>
+                <option value="Opción 2 B">Opción 2 B</option>
+                <option value="Opción 3 B">Opción 3 B</option>
+                <option value="Opción 4 B">Opción 4 B</option>
+            </select>
+        </div>
         <script>
+            // Formularios "Interactivos"
             function getBoxes() {
                 const boxes = document.querySelectorAll('input[type=checkbox]:checked');
                 let boxesValue = ""
-                for (var i = 0; i > boxes.length; i++) {
-                    boxesValue += boxes[i].value;
+                for (var i = 0; i < boxes.length; i++) {
+                    boxesValue += boxes[i].value + "\n";
                 }
                 if (boxesValue.length != 0) {
-                    return alert("Betis");
-                }else {
-                    return alert("Seleccione alguna casilla");
-                }
-            }
-
-            function getCheckedBoxes() {
-                const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
-                var selectedBoxes = ""
-                for (var i = 0; i < checkboxes.length; i++) {
-                    selectedBoxes += checkboxes[i].value + "\n"
-                }
-                if (checkboxes.length != 0) {
-                    return alert(selectedBoxes)
+                    return alert(boxesValue);
                 } else {
-                    return alert("No vehicle selected")
+                    return alert("Seleccione alguna casilla");
                 }
             }
 
             function getRadio() {
                 var radio = document.querySelector('input[type=radio]:checked')
                 if (!radio) {
-                    alert("klk");
-                }else {
+                    alert("Seleccione una opción");
+                } else {
                     alert(radio.value);
                 }
+            }
+
+            // Mostrar y ocultar elementos
+            function hideElement() {
+                document.getElementById("shownElement").style.display = "none";
+                document.getElementById("hiddenElement").style.display = "block";
+            }
+            function revealElement() {
+                document.getElementById("hiddenElement").style.display = "none";
+                document.getElementById("shownElement").style.display = "block";
+            }
+
+            //Menú desplegable
+            function dropdown() {
+                var select = document.getElementById("optionA");
+                var option = select.options[select.selectedIndex];
+
+                var dropdownB = document.getElementById("optionB");
+                dropdownB.add(option);
             }
         </script>
     </main>
