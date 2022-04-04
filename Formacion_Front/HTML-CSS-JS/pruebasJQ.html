@@ -36,7 +36,7 @@
             <br>
             <input type="checkbox" name="oliver" id="oliver" value="Oliver Atom">Oliver Atom</input>
             <br>
-            <input type="submit" value="CheckBoxes" onclick="getBoxes()">
+            <input type="submit" value="CheckBoxes" id="checks">
             <br><br>
             <!-- Obtener el valor de un solo radio y hacerle un alert -->
             <input type="radio" name="car" id="audi" value="Audi">Audi</input>
@@ -49,7 +49,7 @@
             <br>
             <input type="radio" name="car" id="dacia" value="Dacia">Dacia</input>
             <br>
-            <input type="submit" value="Radio" onclick="getRadio()">
+            <input type="submit" value="Radio" id="radio">
         </form>
         <!-- Mostrar y ocultar elementos -->
         <div id="relative">
@@ -59,7 +59,8 @@
         <br><br>
         <!-- Menú desplegable -->
         <div>
-            <select name="option" id="optionA" onclick="dropdown()">
+            <select name="option" class = "optionA">
+                <option value="Pasar">Pasar opciones</option>
                 <option value="Opción 1 A">Opción 1 A</option>
                 <option value="Opción 2 A">Opción 2 A</option>
                 <option value="Opción 3 A">Opción 3 A</option>
@@ -67,14 +68,12 @@
                 <option value="Opción 5 A">Opción 5 A</option>
                 <option value="Opción 6 A">Opción 6 A</option>
             </select>
-            <select name="option" id="optionB">
+            <select name="option" class = "optionB">
                 <option value="Opción 1 B">Opción 1 B</option>
                 <option value="Opción 2 B">Opción 2 B</option>
                 <option value="Opción 3 B">Opción 3 B</option>
                 <option value="Opción 4 B">Opción 4 B</option>
             </select>
         </div>
-        <!-- Carga de jquery al proyecto -->
-        
 
 </html>

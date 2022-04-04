@@ -34,9 +34,36 @@ $(document).ready(function(){
         $(this).attr("src", "https://programarfacil.com/wp-content/uploads/2015/08/jQurery.png");
     })
 
-    $("#checks").click(function() {
-        if ($("input[type=checkbox").prop(":checked")) {
-            
+
+    $("#checks").on("click", function (){
+        var boxes = $("input[type=checkbox]:checked");
+        let boxesValue = "";
+        
+        for (var i = 0; i < boxes.length; i++) {
+            boxesValue += boxes[i].value + "\n";
         }
-    })
+        if (boxesValue.length != 0) {
+                return alert(boxesValue);
+            } else {
+                return alert("Seleccione alguna casilla");
+            }
+    });
+
+    $("#radio").on("click", function () {
+        var radio = $("input[type=radio]:checked");
+
+        if (radio.val() == undefined) {
+            alert("Seleccione una opción");
+        } else {
+            alert(radio.val());
+        }
+      })
+
+    $("select.optionA").change(function () {
+        var value = $(this).children("option:selected");
+        var optionB = $("select.optionB");
+        optionB.append(value);
+    });
+
+
 });
