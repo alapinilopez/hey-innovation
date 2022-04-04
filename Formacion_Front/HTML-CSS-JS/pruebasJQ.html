@@ -12,23 +12,7 @@
 
 <body>
     <!-- Scripts de jquery -->
-    <script>
-        $(document).ready(function(){
-            $("#hello").on("click", function(){
-                // Nueva ventana
-                window.open("https://www.marca.com/futbol.html","holaMundo","height=790", "width=500px");
-            })
-
-            $("#email").keyup(function() {
-                var VAL = this.value;
-                var email = new RegExp('^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$');
-
-                if(email.test(VAL)) {
-                    return alert("Email validado");
-                }
-            });
-        });
-    </script>
+    <script src="/hey-innovation/Formacion_Front/HTML-CSS-JS/javascript/pruebasJQuery.js"></script>
     <main>
         <!-- Nueva venta -->
         <button id="hello">New Window</button>
@@ -69,10 +53,8 @@
         </form>
         <!-- Mostrar y ocultar elementos -->
         <div id="relative">
-                <div id="shownElement"><img src="/hey-innovation/Formacion_Front/HTML-CSS-JS/images/eevee.png" alt="Eevee"
-                        onclick="hideElement()"></div>
-                <div id="hiddenElement"><img src="/hey-innovation/Formacion_Front/HTML-CSS-JS/images/umbreon.png"
-                        alt="Umbreon" onclick="revealElement()"></div>
+                <div><img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript"></div>
+                <div><img src= "https://programarfacil.com/wp-content/uploads/2015/08/jQurery.png" alt="jquery"></div>
         </div>
         <br><br>
         <!-- Menú desplegable -->
