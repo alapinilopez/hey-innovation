@@ -1,13 +1,25 @@
 $(document).ready(function() {
-    
-    $("#critica").change(function() {
-        $("#critica").hide();
-        var value =  $("#ratings").val();
+    // $("#reviews").hide();
+
+    // $("#critica").change(function() {
+    //     $("#reviews").hide();
+    //     var value =  $("#ratings").val();
         
-        if (value == "Todas") {
-            $("#critica").show();
+    //     if (value == "Todas") {
+    //         $("#critica").show();
+    //     } else {
+    //         $("#critica[value]" = value).show();
+    //     }
+    // })
+
+    $("#ratings").change(function() {
+        
+        var selectedRating = $(this).children("option:selected").val();
+        if(selectedRating == "Todas") {
+            $(".critica").show();
         } else {
-            $("#critica[value]" = value).show();
+            $(".critica").hide();
+            $(".critica[value=" + selectedRating +"]").show();   
         }
     })
 })
