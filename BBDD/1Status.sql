@@ -1,1 +1,1 @@
-INSERT INTO practicas_alap.status (statname) VALUES ('enviado'), ('aprobado'), ('rechazado') ON CONFLICT DO NOTHING;
+INSERT INTO practicas_alap.status (statname) VALUES ('enviado'), ('aprobado'), ('rechazado');
