@@ -99,8 +99,7 @@ DROP TABLE IF EXISTS practicas_alap.community CASCADE;
 CREATE TABLE IF NOT EXISTS practicas_alap.community (
 commId 		INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 typeId		INTEGER REFERENCES practicas_alap.communityType(typeId),
-subId		INTEGER REFERENCES practicas_alap.subcommunity(subId),
-commName 	VARCHAR(20) NOT NULL
+commName 	VARCHAR(100) NOT NULL
 );
 
 
