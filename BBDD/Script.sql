@@ -35,7 +35,7 @@ ADD COLUMN clientId INTEGER
 REFERENCES practicas_alap.Client(clientId);
 
 ALTER TABLE practicas_alap.Contacts 
-ADD COLUMN clientAdded INTEGER
+ADD COLUMN clientAdded INTEGER NOT NULL;
 REFERENCES practicas_alap.Client(clientId);
 
 COMMENT ON TABLE practicas_alap.contacts IS 'Clients contacts';

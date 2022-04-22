@@ -1,7 +1,7 @@
 INSERT INTO practicas_alap.community 
 	(typeid,
 	commname)
-/*  JOIN las tablas mediante el typeid y según el id seleccionado */
+
 VALUES 
 	(1,		
 	'Tolkien Enjoyers'),

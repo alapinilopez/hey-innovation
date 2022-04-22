@@ -25,7 +25,7 @@ BEGIN
 		email := CONCAT(nick, '@faisbuk.com');
 		country := arr[floor(random() * array_length(arr, 1)) + 1];
 		 case
-                when country = 'ESP' then
+                when country = 'ES' then
                     city := (esp_cities)[floor(random() * 3 + 1)];
                 when country = 'FR' then 
                     city := (fr_cities)[floor(random() * 3 + 1)];
