@@ -23,7 +23,7 @@ DO $$
                         practicas_alap.message m
                     WHERE
                     (m.clientsend = contactSend AND m.clientreceive  = c.clientid )
-                        OR (m.clientsend = c.clientid AND m.clientreceive  = contactSend);
+                        OR (m.clientsend = c.clientid AND m.clientreceive  = contactSend)
                 chat := REPEAT('Ola k ase? jaja Bien y tú?', (FLOOR(RANDOM()*5)::INT));
                 mssgTime := now() - '1 year'::INTERVAL * (random() * 2);        
                 )  

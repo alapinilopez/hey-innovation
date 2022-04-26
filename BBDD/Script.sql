@@ -48,7 +48,6 @@ CREATE TABLE IF NOT EXISTS practicas_alap.Article (
 artId 			INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 clientId		INTEGER REFERENCES practicas_alap.Client(Clientid),
 statId			INTEGER REFERENCES practicas_alap.Status(StatId),
-favId			INTEGER REFERENCES practicas_alap.Favorites(FavId),
 title 			VARCHAR(35) NOT NULL,
 postDate 		TIMESTAMP NOT NULL,
 summary 		VARCHAR(250) NOT NULL,
