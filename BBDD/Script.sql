@@ -43,6 +43,16 @@ COMMENT ON COLUMN practicas_alap.contacts.contid IS 'Unique users contacts id';
 COMMENT ON COLUMN practicas_alap.contacts.clientid IS 'Client FK';
 COMMENT ON COLUMN practicas_alap.contacts.clientadded IS 'Client new contact';
 
+DROP TABLE IF EXISTS practicas_alap.Status CASCADE;
+CREATE TABLE IF NOT EXISTS practicas_alap.Status (
+statId 		INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+statName 	VARCHAR(15) NOT NULL
+);
+
+COMMENT ON TABLE  practicas_alap.status IS 'Validate, delet, not posted status';
+COMMENT ON COLUMN  practicas_alap.status.statid  IS 'Unique status id';
+COMMENT ON COLUMN  practicas_alap.status.statname  IS 'Status name';
+
 DROP TABLE IF EXISTS practicas_alap.Article CASCADE;
 CREATE TABLE IF NOT EXISTS practicas_alap.Article (
 artId 			INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -78,15 +88,6 @@ COMMENT ON COLUMN practicas_alap.favorites.favid  IS 'Favorites unique id';
 COMMENT ON COLUMN practicas_alap.favorites.clientid  IS 'Client FK';
 COMMENT ON COLUMN practicas_alap.favorites.artid  IS 'Article FK';
 
-DROP TABLE IF EXISTS practicas_alap.Status CASCADE;
-CREATE TABLE IF NOT EXISTS practicas_alap.Status (
-statId 		INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-statName 	VARCHAR(15) NOT NULL
-);
-
-COMMENT ON TABLE  practicas_alap.status IS 'Validate, delet, not posted status';
-COMMENT ON COLUMN  practicas_alap.status.statid  IS 'Unique status id';
-COMMENT ON COLUMN  practicas_alap.status.statname  IS 'Status name';
 
 DROP TABLE IF EXISTS practicas_alap.communityType CASCADE;
 CREATE TABLE IF NOT EXISTS practicas_alap.communityType (
