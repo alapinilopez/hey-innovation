@@ -20,6 +20,13 @@ FROM practicas_alap.client c WHERE a.clientid = c.clientid),
 FROM practicas_alap.status s WHERE a.statid = s.statid)
 FROM practicas_alap.article a
 
+-- Articulo y num comentarios
+SELECT a.artid , length(a.artcontent), a.postdate, c.nickname, s.statname,
+(SELECT count(artid) AS numComments FROM practicas_alap.commentary c1  WHERE c1.artid = a.artid AND c1.statid = 2)
+FROM practicas_alap.article a
+INNER JOIN practicas_alap.client c ON a.clientid = c.clientid
+INNER JOIN practicas_alap.status s ON a.statid = s.statid
+
 -- Muestra los datos de las comunidades existentes. Nombre com, tipo com y nick del creador
 SELECT c.commname, c4.typename, c3.nickname
 FROM practicas_alap.community c

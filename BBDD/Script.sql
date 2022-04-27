@@ -62,8 +62,8 @@ title 			VARCHAR(35) NOT NULL,
 postDate 		TIMESTAMP NOT NULL,
 summary 		VARCHAR(250) NOT NULL,
 artContent 		VARCHAR(5000) NOT NULL,
-isNews 			BOOLEAN,
-expirationDate 	TIMESTAMP NOT NULL
+isNews 			BOOLEAN NOT NULL,
+expirationDate 	TIMESTAMP
 );
 
 COMMENT ON TABLE practicas_alap.article  IS 'Social network articles';
