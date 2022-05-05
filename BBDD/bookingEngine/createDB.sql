@@ -237,6 +237,23 @@ taxBase 	FLOAT,
 totalPrice 	FLOAT
 );
 
+DROP TABLE IF EXISTS be_alap.offer CASCADE;
+CREATE TABLE IF NOT EXISTS be_alap.offer (
+offerId INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+offerName VARCHAR(35) NOT NULL,
+description VARCHAR (250) NOT NULL,
+discountPercentage DECIMAL(5, 2) NOT NULL,
+discountAbsolute FLOAT NOT NULL,
+discountApplied FLOAT NOT NULL
+);
+
+DROP TABLE IF EXISTS be_alap.bookingOffer CASCADE;
+CREATE TABLE IF NOT EXISTS be_alap.bookingOffer (
+booking INTEGER REFERENCES be_alap.booking(bookid),
+offer	INTEGER REFERENCES be_alap.offer(offerid),
+hasMany BOOLEAN
+);
+
 DROP TABLE IF EXISTS be_alap.yearsOld CASCADE;
 CREATE TABLE IF NOT EXISTS be_alap.yearsOld (
 yearsId 	INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
