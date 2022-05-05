@@ -16,6 +16,13 @@ body {
     border-bottom: grey;
 }
 
+#user {
+    display: flex;
+    flex: row;
+    align-items: center;
+    left: 60%;
+}
+
 #logoWeb {
     position: relative;
     right: 20px;
