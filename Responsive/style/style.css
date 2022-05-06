@@ -17,10 +17,10 @@ body {
     border-bottom: grey;
 }
 
-#mainbar > nav {
-    right: 20px;
+#mainbar > div {
     height: fit-content;
     width: fit-content;
+    padding: 10px;
     object-fit: contain;
 }
 
