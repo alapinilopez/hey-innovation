@@ -5,6 +5,7 @@ body {
 #mainBar {
     display: flex;
     flex: row;
+    max-height: 50px;
     align-items: center;
     list-style-type: none;
     position: -webkit-sticky; /* Safari */
@@ -16,7 +17,23 @@ body {
     border-bottom: grey;
 }
 
-#user {
+#mainbar > nav {
+    right: 20px;
+    height: fit-content;
+    width: fit-content;
+    object-fit: contain;
+}
+
+#userIcon {
+    width: 75px;
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* #mainbar#user {
+    height: inherit;
+    margin: 0;
+    width: 50px;
     display: flex;
     flex: row;
     align-items: center;
@@ -31,13 +48,6 @@ body {
     max-height: auto;
 }
 
-#userIcon {
-    position: absolute;
-    width: 75px;
-    right: 140px;
-    max-width: 100%;
-    max-height: auto;
-}
 
 #logout {
     position: absolute;
@@ -57,3 +67,12 @@ body {
     width: 31px;
     max-height: auto;
 }
+*/
+#app-elements {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    overflow: auto;
+    padding: auto;
+    align-items: center;
+} 
