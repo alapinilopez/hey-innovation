@@ -14,7 +14,12 @@ body {
     padding: 10px;
     overflow: hidden;
     background-color: white;
-    border-bottom: grey;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(207, 207, 207);
+}
+
+main {
+    margin-top: 3%;
 }
 
 #mainbar > div {
@@ -27,18 +32,32 @@ body {
     object-fit: contain;
 }
 
-#userIcon {
-    width: 75px;
-    max-width: 100%;
-    max-height: auto;
-}
+#app-elements {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    overflow: auto;
+    padding: auto;
+    align-items: center;
+} 
 
 #logo {
     position: relative;
     right: 20px;
     width: 447px;
     max-width: 100%;
-    max-height: auto;
+    max-height: fit-content;
+}
+
+#userIcon {
+    right: 30%;
+    position: absolute;
+    width: 75px;
+    height: auto;
+}
+
+#userName {
+    position: absolute;
 }
 
 #logout {
@@ -47,8 +66,6 @@ body {
     width: 28px;
     max-height: auto;
 }
-/*
-
 
 #dot3 {
     position: absolute;
@@ -60,13 +77,16 @@ body {
     right: 95px;
     width: 31px;
     max-height: auto;
+}    
+
+#messaging {
+    display: none;
 }
-*/
-#app-elements {
-    position: relative;
-    margin: auto;
-    width: 80%;
-    overflow: auto;
-    padding: auto;
-    align-items: center;
-} 
+
+#calendar {
+    display: none;
+}
+
+#care {
+    display: none;
+}
