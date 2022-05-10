@@ -5,7 +5,7 @@ body {
 #mainBar {
     display: absolute;
     flex: row;
-    max-height: 50px;
+    max-height: 75px;
     align-items: center;
     list-style-type: none;
     position: -webkit-sticky; /* Safari */
@@ -34,12 +34,16 @@ main {
 
 #app-elements {
     position: relative;
+    left: 5%;
     margin: auto;
-    width: 80%;
     overflow: auto;
     padding: auto;
     align-items: center;
-} 
+}
+
+.grid {
+    padding: auto;
+}
 
 #logo {
     position: relative;
@@ -50,43 +54,246 @@ main {
 }
 
 #userIcon {
-    right: 30%;
+    right: 360px;
     position: absolute;
-    width: 75px;
-    height: auto;
+    width: auto;
+    height: 75px;
 }
 
 #userName {
+    top:45%;
     position: absolute;
+    right: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 #logout {
+    top: 30%;
     position: absolute;
     right: 40px;
     width: 28px;
     max-height: auto;
 }
 
-#dot3 {
+#logout-text {
     position: absolute;
-    right: 85px;
+    bottom: 10px;
+    right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: red;
+}
+
+#dot3 {
+    top: 40%;
+    position: absolute;
+    right: 90px;
 }
 
 #config {
+    top: 30%;
     position: absolute;
-    right: 95px;
+    right: 125px;
     width: 31px;
     max-height: auto;
-}    
+}
+
+#config-text {
+    right: 105px;
+    position: absolute;
+    bottom:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
 #messaging {
     display: none;
+    position: relative;
+    height: auto;
+    max-width: 100%;
 }
 
 #calendar {
     display: none;
+    position: relative;
+    height: auto;
+    max-width: 100%;
 }
 
 #care {
     display: none;
+    position: relative;
+    height: auto;
+    max-width: 100%;
 }
+
+@media screen and (max-width: 1024){       /*Media Query Tablet */
+    #logo {
+        position: relative;
+        right: 20px;
+        width: 447px;
+        max-width: 100%;
+        max-height: fit-content;
+    }
+    
+    #userIcon {
+        right: 360px;
+        position: absolute;
+        width: auto;
+        height: 75px;
+    }
+    
+    #userName {
+        top:45%;
+        position: absolute;
+        right: 200px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+    #logout {
+        top: 30%;
+        position: absolute;
+        right: 40px;
+        width: 28px;
+        max-height: auto;
+    }
+    
+    #logout-text {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: red;
+    }
+    
+    #dot3 {
+        top: 40%;
+        position: absolute;
+        right: 90px;
+    }
+    
+    #config {
+        top: 30%;
+        position: absolute;
+        right: 125px;
+        width: 31px;
+        max-height: auto;
+    }
+    
+    #config-text {
+        right: 105px;
+        position: absolute;
+        bottom:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 640px){
+    #logo {
+        position: relative;
+        right: 20px;
+        width: 447px;
+        max-width: 100%;
+        max-height: fit-content;
+    }
+    
+    #userIcon {
+        right: 125px;
+        position: absolute;
+        width: auto;
+        height: 75px;
+    }
+    
+    #userName {
+        display: none;
+        top:45%;
+        position: absolute;
+        right: 200px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+    #logout {
+        top: 30%;
+        position: absolute;
+        right: 20px;
+        width: 28px;
+        max-height: auto;
+    }
+    
+    #logout-text {
+        display: none;
+    }
+    
+    #dot3 {
+        display: none;
+    }
+    
+    #config {
+        top: 30%;
+        position: absolute;
+        right: 75px;
+        width: 31px;
+        max-height: auto;
+    }
+    #config-text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px){
+    html, main {
+        overflow-x: hidden;    
+    }
+
+    #app-elements {
+        overflow-x: hidden;
+        position: relative;
+        left: 1.5%;
+        margin: auto;
+        overflow: auto;
+        padding: auto;
+        align-items: center;
+    }
+    
+    #logo {
+        position: relative;
+        right: 20px;
+        width: 230px;
+        max-height: auto;
+    }
+    
+    #userIcon {
+        top: 27%;
+        right: 75px;
+        position: absolute;
+        width: auto;
+        height: 35px;
+    }
+    
+    #logout {
+        top: 30%;
+        position: absolute;
+        right: 0px;
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    
+    #dot3 {
+        display: none;
+    }
+    
+    #config {
+        top: 30%;
+        position: absolute;
+        right: 35px;
+        max-width: 100%;
+        max-height: auto;
+    }
+}
+
