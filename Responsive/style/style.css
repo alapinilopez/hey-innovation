@@ -114,6 +114,48 @@ main {
     max-width: 100%;
 }
 
+#messaging-panel {
+    display: block;
+    border: 1px solid;
+    border-color: #dcdddf;
+    width: 80%;
+    left: auto;
+    right: auto;
+    font-size: 0;
+}
+
+#mail-buttons {
+    border-bottom: 1px solid;
+    border-color: #dcdddf;
+}
+
+#search {
+    height: 30px;
+    right: 1px;
+}
+
+.button {
+    background-color: white;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-color: #dcdddf;
+    padding: 15px 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-size: 16px;
+}
+.button:hover {
+    background-color: whitesmoke;
+}
+
+.button:active {
+    background-color: red;
+    color: white;
+}
+
 #calendar {
     display: none;
     position: relative;
@@ -242,6 +284,13 @@ main {
     }
     #config-text {
         display: none;
+    }
+
+    #messaging-panel {
+        display: none;
+        margin: auto;
+        padding: 1%;
+        background: url(/Responsive/images/messaging_panel_smartphone.png);
     }
 }
 

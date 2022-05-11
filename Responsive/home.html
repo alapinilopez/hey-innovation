@@ -28,7 +28,22 @@
     <main>
         <div id="app-elements">
             <img src="/Responsive/images/My alerts.png" alt="alerts" class="grid" onclick="messaging()">
-                <img src="/Responsive/images/MESSAGING.png" alt="alerts and messages panel" id="messaging">
+                <div id="messaging-panel">
+                    <div id="mail-buttons"> <!-- DIV contenedor de los botones y barra de búsqueda -->
+                        <div class="button"><input type="checkbox" name=""></div>
+                        <div class="button">New Message</div>
+                        <div class="button">Inbox</div>
+                        <div class="button">Sent</div>
+                    </div>
+                    <div> <!--DIV contenedor de los mails recibidos-->
+                        <div class="mail">
+                            <input type="checkbox" name="" id="">
+                            <div class="name">John Snow</div>
+                            <span class="asunto">Hi Friend!</span>
+                            <span class="date">11 May 2022</span>
+                        </div>
+                    </div>
+                </div>
             <img src="/Responsive/images/My calendar.png" alt="calendar" class="grid" onclick="calendar()">
                 <img src="/Responsive/images/CALENDAR.png" alt="calendar panel" id="calendar">
             <img src="/Responsive/images/Circle of care.png" alt="circle-of-care" class="grid" onclick="care()">
