@@ -156,6 +156,67 @@ main {
     color: white;
 }
 
+#received-mails {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+    font-size: 16px;
+}
+
+#received-mails tr, #received-mails td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+#received-mails td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #fefefe;
+    color: #626262; 
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.arrow {
+    height: 15px;
+    max-width: 100%;
+}
+
+#john-mail {
+    background-color: #f9f9f9;
+    height: 200px;
+    border-bottom: 1px solid #ddd;
+}
+
+#concept-mail {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #6a6a6a;
+    top: 10px;
+    left: 70px;
+    position: relative;
+}
+
+#body-mail {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #6a6a6a;
+    top: 10px;
+    left: 70px;
+    width: 80%;
+    position: relative;
+}
+
 #calendar {
     display: none;
     position: relative;

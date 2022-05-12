@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,21 @@
     <title>my Easy Connect</title>
     <link rel="stylesheet" href="/Responsive/style/style.css">
 </head>
+
 <body>
     <header>
         <nav id="mainBar">
             <img src="/Responsive/images/logo-easy-connect_SBS.png" alt="Logo Web" id="logo">
-        
+
             <img src="/Responsive/images/senior.png" alt="User Icon" id="userIcon">
 
             <span id="userName">Cordelia Carpenter</span>
-             
+
             <img src="/Responsive/images/config.png" alt="config" id="config">
             <span id="config-text">SETTINGS</span>
 
             <img src="/Responsive/images/dot3.png" alt="vertical Dots" id="dot3">
-  
+
             <img src="/Responsive/images/log-out.png" alt="logout" id="logout">
             <span id="logout-text">LOGOUT</span>
         </nav>
@@ -28,26 +30,79 @@
     <main>
         <div id="app-elements">
             <img src="/Responsive/images/My alerts.png" alt="alerts" class="grid" onclick="messaging()">
-                <div id="messaging-panel">
-                    <div id="mail-buttons"> <!-- DIV contenedor de los botones y barra de búsqueda -->
-                        <div class="button"><input type="checkbox" name=""></div>
-                        <div class="button">New Message</div>
-                        <div class="button">Inbox</div>
-                        <div class="button">Sent</div>
-                    </div>
-                    <div> <!--DIV contenedor de los mails recibidos-->
-                        <div class="mail">
-                            <input type="checkbox" name="" id="">
-                            <div class="name">John Snow</div>
-                            <span class="asunto">Hi Friend!</span>
-                            <span class="date">11 May 2022</span>
-                        </div>
-                    </div>
+            <div id="messaging-panel">
+                <div id="mail-buttons">
+                    <!-- DIV contenedor de los botones y barra de búsqueda -->
+                    <div class="button"><input type="checkbox" name="all-mails" id="all-mails"></div>
+                    <div class="button">New Message</div>
+                    <div class="button">Inbox</div>
+                    <div class="button">Sent</div>
                 </div>
+                <!--DIV contenedor de los mails recibidos-->
+                <table id="received-mails">
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><span class="dot"></span></td>
+                        <td>John Snow</td>
+                        <td>Hi Friend!!</td>
+                        <td>12 April 2014</td>
+                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                    </tr>
+                    <tr>
+                        <div id="john-mail">
+                            <span id="concept-mail">Hi Friend!!</span>
+                            <p id="body-mail">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ligula magna, at
+                                porta mi hendrerit in. Nulla ullamcorper velit mauris, ut volutpat neque faucibus vel.
+                                Etiam accumsan dolor sed luctus elementum. Praesent tempor elit nibh, nec vulputate dui
+                                porttitor eu. Maecenas porttitor pulvinar consectetur. Donec commodo, arcu venenatis
+                                scelerisque suscipit, mi nunc sollicitudin dolor, eget viverra urna ligula id est.
+                                Aenean egestas tortor ac risus maximus, eget finibus tellus vulputate. Vestibulum rutrum
+                                mi massa, sit amet mattis quam consectetur eget. Pellentesque suscipit placerat posuere.
+                                Integer dictum magna id nisl mattis, non dictum felis fermentum. Integer orci nunc,
+                                vestibulum quis magna id, posuere vehicula massa. Pellentesque sollicitudin varius
+                                congue. Aenean id vestibulum velit.
+                            </p>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><span class="dot"></span></td>
+                        <td>Richard Chaning</td>
+                        <td>Memorial CLinic</td>
+                        <td>12 April 2014</td>
+                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><span class="dot"></span></td>
+                        <td>Elisabeth Bale</td>
+                        <td>From Connecticut</td>
+                        <td>21 June 2013</td>
+                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><span class="dot"></span></td>
+                        <td>Sarah Connor</td>
+                        <td>Cyberdyne Systems</td>
+                        <td>20 June 2030</td>
+                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><span class="dot"></span></td>
+                        <td>Arturo González</td>
+                        <td>Recordatorio COnsulta</td>
+                        <td>20 April 2013</td>
+                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                    </tr>
+                </table>
+            </div>
             <img src="/Responsive/images/My calendar.png" alt="calendar" class="grid" onclick="calendar()">
-                <img src="/Responsive/images/CALENDAR.png" alt="calendar panel" id="calendar">
+            <img src="/Responsive/images/CALENDAR.png" alt="calendar panel" id="calendar">
             <img src="/Responsive/images/Circle of care.png" alt="circle-of-care" class="grid" onclick="care()">
-                <img src="/Responsive/images/CARE.png" alt="circle-of-care" id="care">
+            <img src="/Responsive/images/CARE.png" alt="circle-of-care" id="care">
             <img src="/Responsive/images/My daily care-o-gram.png" alt="care-program" class="grid">
             <img src="/Responsive/images/Repository.png" alt="repository" class="grid">
             <img src="/Responsive/images/Reports.png" alt="reports" class="grid">
@@ -57,4 +112,5 @@
 
     <script src="/Responsive/javascript/home.js"></script>
 </body>
+
 </html>
