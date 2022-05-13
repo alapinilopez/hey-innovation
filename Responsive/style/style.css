@@ -107,6 +107,21 @@ main {
     font-weight: bold;
 }
 
+.bar-text {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #868686;
+    padding: 2%;
+    bottom: 25%;
+}
+
+#messaging-bar {
+    background-color: #dfe0e5;
+    height: 60px;
+    max-width: 100%;
+}
+
 #messaging {
     display: none;
     position: relative;
@@ -118,6 +133,7 @@ main {
     display: block;
     border: 1px solid;
     border-color: #dcdddf;
+    margin: 1%;
     width: 80%;
     left: auto;
     right: auto;
@@ -192,7 +208,12 @@ main {
     max-width: 100%;
 }
 
+#rotate {
+    rotate: 0;
+}
+
 #john-mail {
+    display: none;
     background-color: #f9f9f9;
     height: 200px;
     border-bottom: 1px solid #ddd;
@@ -213,15 +234,125 @@ main {
     color: #6a6a6a;
     top: 10px;
     left: 70px;
-    width: 80%;
+    width: 90%;
     position: relative;
 }
 
-#calendar {
+#reply-mail {
+    position: relative;
+    left: 650px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: #047f7c;
+    background-color: #00dabf;
+    height: 30px;
+    max-width: 70px;
+}
+
+#delete-mail {
+    position: relative;
+    left: 740px;
+    bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: #f6ffff;
+    background-color: #fd4e3d;
+    height: 30px;
+    max-width: 70px;
+}
+
+#prev-msg {
+    background-color: #e6e6e6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#reminders-calendar {
     display: none;
     position: relative;
     height: auto;
     max-width: 100%;
+}
+
+#reminders-panel {
+    position: abs;
+    margin: 1%;
+    background-color: #fcfcfe;
+    border: 1px solid #c2cbd0;
+    width: 80%;   
+}
+
+#calendar-bar {
+    background-color: #dfe0e5;
+    height: 60px;
+    max-width: 100%;
+}
+
+/* #reminders {
+    position: relative;
+    padding: 3%;
+    left: 5%;
+    margin: auto;
+    width: 40%;
+} */
+
+#calendar {
+    position: relative;
+    left: 25%;
+    padding: 3%;
+    margin: auto;
+    width: 40%;
+}
+
+#month {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #959a9d;
+    text-align: center;
+    height: 20px;
+}
+
+#day, #date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+#day {
+    background-color: #00dabf;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #525e5a;
+    padding: 1%;
+}
+
+#date-grid button{
+    position: relative;
+    border: 0;
+    width: 4.5ch;
+    height: 4.5ch;
+    border-radius: 50%;
+    color: #9e9e9e;
+    background-color: transparent;
+  }
+
+#date-grid button:first-child {
+    grid-column: 7;
+}
+
+#date-grid button:hover {
+    background-color: #ff8a81;
+    color: #f8f5ff;
+}
+
+#date-grid button:active {
+    background-color: red;
+    border: 2px solid #aba7a8;
 }
 
 #care {
@@ -351,7 +482,6 @@ main {
         display: none;
         margin: auto;
         padding: 1%;
-        background: url(/Responsive/images/messaging_panel_smartphone.png);
     }
 }
 

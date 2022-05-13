@@ -30,77 +30,152 @@
     <main>
         <div id="app-elements">
             <img src="/Responsive/images/My alerts.png" alt="alerts" class="grid" onclick="messaging()">
-            <div id="messaging-panel">
-                <div id="mail-buttons">
-                    <!-- DIV contenedor de los botones y barra de búsqueda -->
-                    <div class="button"><input type="checkbox" name="all-mails" id="all-mails"></div>
-                    <div class="button">New Message</div>
-                    <div class="button">Inbox</div>
-                    <div class="button">Sent</div>
+            <div id="messaging">
+                <div id="messaging-bar">
+                    <img src="/Responsive/images/messaging-logo.png" alt="messaging-icon">
+                    <span class="bar-text">ALERTS AND MESSAGING</span>
                 </div>
-                <!--DIV contenedor de los mails recibidos-->
-                <table id="received-mails">
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td><span class="dot"></span></td>
-                        <td>John Snow</td>
-                        <td>Hi Friend!!</td>
-                        <td>12 April 2014</td>
-                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
-                    </tr>
-                    <tr>
-                        <div id="john-mail">
-                            <span id="concept-mail">Hi Friend!!</span>
-                            <p id="body-mail">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ligula magna, at
-                                porta mi hendrerit in. Nulla ullamcorper velit mauris, ut volutpat neque faucibus vel.
-                                Etiam accumsan dolor sed luctus elementum. Praesent tempor elit nibh, nec vulputate dui
-                                porttitor eu. Maecenas porttitor pulvinar consectetur. Donec commodo, arcu venenatis
-                                scelerisque suscipit, mi nunc sollicitudin dolor, eget viverra urna ligula id est.
-                                Aenean egestas tortor ac risus maximus, eget finibus tellus vulputate. Vestibulum rutrum
-                                mi massa, sit amet mattis quam consectetur eget. Pellentesque suscipit placerat posuere.
-                                Integer dictum magna id nisl mattis, non dictum felis fermentum. Integer orci nunc,
-                                vestibulum quis magna id, posuere vehicula massa. Pellentesque sollicitudin varius
-                                congue. Aenean id vestibulum velit.
-                            </p>
-                        </div>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td><span class="dot"></span></td>
-                        <td>Richard Chaning</td>
-                        <td>Memorial CLinic</td>
-                        <td>12 April 2014</td>
-                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td><span class="dot"></span></td>
-                        <td>Elisabeth Bale</td>
-                        <td>From Connecticut</td>
-                        <td>21 June 2013</td>
-                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td><span class="dot"></span></td>
-                        <td>Sarah Connor</td>
-                        <td>Cyberdyne Systems</td>
-                        <td>20 June 2030</td>
-                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td><span class="dot"></span></td>
-                        <td>Arturo González</td>
-                        <td>Recordatorio COnsulta</td>
-                        <td>20 April 2013</td>
-                        <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
-                    </tr>
-                </table>
+                <div id="messaging-panel">
+                    <div id="mail-buttons">
+                        <!-- DIV contenedor de los botones y barra de búsqueda -->
+                        <div class="button"><input type="checkbox" name="all-mails" id="all-mails"></div>
+                        <div class="button">New Message</div>
+                        <div class="button">Inbox</div>
+                        <div class="button">Sent</div>
+                    </div>
+                    <!--DIV contenedor de los mails recibidos-->
+                    <table id="received-mails">
+                        <tr id="john-snow-row" onclick="john()">
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><span class="dot"></span></td>
+                            <td>John Snow</td>
+                            <td>Hi Friend!!</td>
+                            <td>12 April 2014</td>
+                            <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                        </tr>
+                        <tr>
+                            <div id="john-mail">
+                                <span id="concept-mail">Hi Friend!!</span>
+                                <p id="body-mail">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ligula magna, at
+                                    porta mi hendrerit in. Nulla ullamcorper velit mauris, ut volutpat neque faucibus vel.
+                                    Etiam accumsan dolor sed luctus elementum. Praesent tempor elit nibh, nec vulputate dui
+                                    porttitor eu. Maecenas porttitor pulvinar consectetur. Donec commodo, arcu venenatis
+                                    scelerisque suscipit, mi nunc sollicitudin dolor, eget viverra urna ligula id est.
+                                    Aenean egestas tortor ac risus maximus, eget finibus tellus vulputate. Vestibulum rutrum
+                                    mi massa, sit amet mattis quam consectetur eget. Pellentesque suscipit placerat posuere.
+                                    Integer dictum magna id nisl mattis, non dictum felis fermentum. Integer orci nunc,
+                                    vestibulum quis magna id, posuere vehicula massa. Pellentesque sollicitudin varius
+                                    congue. Aenean id vestibulum velit.
+                                </p>
+                                <div id="reply-mail">REPLY</div>
+                                <div id="delete-mail">DELETE</div>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><span class="dot"></span></td>
+                            <td>Richard Chaning</td>
+                            <td>Memorial CLinic</td>
+                            <td>12 April 2014</td>
+                            <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><span class="dot"></span></td>
+                            <td>Elisabeth Bale</td>
+                            <td>From Connecticut</td>
+                            <td>21 June 2013</td>
+                            <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><span class="dot"></span></td>
+                            <td>Sarah Connor</td>
+                            <td>Cyberdyne Systems</td>
+                            <td>20 June 2030</td>
+                            <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td><span class="dot"></span></td>
+                            <td>Arturo González</td>
+                            <td>Recordatorio Consulta</td>
+                            <td>20 April 2013</td>
+                            <td><img src="/Responsive/images/arrow.png" alt="arrow" class="arrow"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td id="prev-msg" style="background-color: rgb(230, 230, 230);">
+                                5 Previously Messages
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <img src="/Responsive/images/My calendar.png" alt="calendar" class="grid" onclick="calendar()">
-            <img src="/Responsive/images/CALENDAR.png" alt="calendar panel" id="calendar">
+            <div id="reminders-calendar">
+                <div id="calendar-bar">
+                    <img src="/Responsive/images/calendar-logo.png" alt="calendar-icon">
+                    <span class="bar-text">REMINDERS CALENDAR</span>
+                </div>
+                <div id="reminders-panel">
+                    <div id="calendar">
+                        <div id="month">
+                            <img src="/Responsive/images/arrow_left.png" alt="" class="arrow">
+                            <span>MAY 2022</span>
+                            <img src="/Responsive/images/arrow.png" alt="" class="arrow">
+                        </div>
+                        <div id="month"></div>
+                        <div id="day">
+                            <div>S</div>
+                            <div>M</div>
+                            <div>T</div>
+                            <div>W</div>
+                            <div>T</div>
+                            <div>F</div>
+                            <div>S</div>
+                        </div>
+                        <div id="date-grid">
+                            <button><time datetime="2022-05-01">1</time></button>
+                            <button><time datetime="2022-05-02">2</time></button>
+                            <button><time datetime="2022-05-03">3</time></button>
+                            <button><time datetime="2022-05-04">4</time></button>
+                            <button><time datetime="2022-05-05">5</time></button>
+                            <button><time datetime="2022-05-06">6</time></button>
+                            <button><time datetime="2022-05-07">7</time></button>
+                            <button><time datetime="2022-05-08">8</time></button>
+                            <button><time datetime="2022-05-09">9</time></button>
+                            <button><time datetime="2022-05-10">10</time></button>
+                            <button><time datetime="2022-05-11">11</time></button>
+                            <button><time datetime="2022-05-12">12</time></button>
+                            <button><time datetime="2022-05-13">13</time></button>
+                            <button><time datetime="2022-05-14">14</time></button>
+                            <button><time datetime="2022-05-15">15</time></button>
+                            <button><time datetime="2022-05-16">16</time></button>
+                            <button><time datetime="2022-05-17">17</time></button>
+                            <button><time datetime="2022-05-18">18</time></button>
+                            <button><time datetime="2022-05-19">19</time></button>
+                            <button><time datetime="2022-05-20">20</time></button>
+                            <button><time datetime="2022-05-21">21</time></button>
+                            <button><time datetime="2022-05-22">22</time></button>
+                            <button><time datetime="2022-05-23">23</time></button>
+                            <button><time datetime="2022-05-24">24</time></button>
+                            <button><time datetime="2022-05-25">25</time></button>
+                            <button><time datetime="2022-05-26">26</time></button>
+                            <button><time datetime="2022-05-27">27</time></button>
+                            <button><time datetime="2022-05-28">28</time></button>
+                            <button><time datetime="2022-05-29">29</time></button>
+                            <button><time datetime="2022-05-30">30</time></button>
+                            <button><time datetime="2022-05-31">31</time></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <img src="/Responsive/images/Circle of care.png" alt="circle-of-care" class="grid" onclick="care()">
             <img src="/Responsive/images/CARE.png" alt="circle-of-care" id="care">
             <img src="/Responsive/images/My daily care-o-gram.png" alt="care-program" class="grid">

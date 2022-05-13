@@ -12,10 +12,21 @@ function messaging() {
     } else {
         panel.style.display = "none";
     }
+
+    document.getElementById("rotate").style.transform = "rotate(90deg)";
+}
+
+function john() {
+    let row = document.getElementById("john-mail");
+    if(row.style.display == "none") {
+        row.style.display = "block";
+    } else {
+        row.style.display = "none";
+    }
 }
 
 function calendar() {
-    let panel = document.getElementById("calendar");
+    let panel = document.getElementById("reminders-calendar");
     if (panel.style.display == "none") {
         panel.style.display = "block";
     } else {
