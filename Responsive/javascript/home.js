@@ -43,19 +43,21 @@ function care() {
     }
 }
 
-// CAMBIAR IMAGEN SEGUN EL MEDIA QUERY
-function mobileImage(mobileSize) {
-    let messageBar = document.getElementById("messaging");
-    let messagePanel = document.getElementById("messaging-panel");
-    
-    if (mobileSize.matches) {
-        messageBar.src = "Responsive/images/Barra_Messaging_Smartphone.png"
-        messagePanel.src = "Responsive/images/messaging_panel_smartphone.png"
-    } else {
-        messagePanel.src = "/Responsive/images/Mensajes.png"
+// KONAMI CODE
+var pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+var current = 0;
+var keyHandler = function (event) {
+    if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
+        current = 0;
+        return;
     }
+    current ++;
 
-    var mobileSize = window.matchMedia("(max-width: 640px)");
-    care(mobileSize);
-    mobileSize.addListener(care);
+    if (pattern.length === current) {
+        current = 0;
+        window.open("https://www.youtube.com/watch?v=9nNevy8K618");
+    }
 }
+
+// Listen for keydown events
+document.addEventListener('keydown', keyHandler, false);

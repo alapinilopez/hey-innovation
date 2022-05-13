@@ -292,13 +292,14 @@ main {
     max-width: 100%;
 }
 
-/* #reminders {
+#reminders {
+    background-color: tomato;
     position: relative;
     padding: 3%;
     left: 5%;
     margin: auto;
     width: 40%;
-} */
+}
 
 #calendar {
     position: relative;
