@@ -31,7 +31,7 @@
         <div id="app-elements">
             <img src="/Responsive/images/My alerts.png" alt="alerts" class="grid" onclick="messaging()">
             <div id="messaging">
-                <div id="messaging-bar">
+                <div class="bar">
                     <img src="/Responsive/images/messaging-logo.png" alt="messaging-icon">
                     <span class="bar-text">ALERTS AND MESSAGING</span>
                 </div>
@@ -123,18 +123,38 @@
             </div>
             <img src="/Responsive/images/My calendar.png" alt="calendar" class="grid" onclick="calendar()">
             <div id="reminders-calendar">
-                <div id="calendar-bar">
+                <div class="bar">
                     <img src="/Responsive/images/calendar-logo.png" alt="calendar-icon">
                     <span class="bar-text">REMINDERS CALENDAR</span>
                 </div>
                 <div id="reminders">
                     <div id="today">
-                        <div id="current-date"></div>
-                        <div id="event"></div>
+                        <span>TODAY</span>
+                    </div>
+                    <div id="current-date">2 JULY/MONDAY</div>
+                    <div class="event">
+                        <div><img src="/Responsive/images/phone-icon.png" alt="phone-icon" class="event-icon"></div>
+                        <span class="event-main-text">Call Dr.Smith</span>
+                        <br>
+                        <span class="event-secondary-text">675 557 890</span>
+                    </div>
+                    <div id="event-info">
+                        <div id="event-header">
+                            <div><img src="/Responsive/images/calendar-icon.png" alt="calendar-icon" class="event-icon">
+                            </div>
+                            <span class="event-main-text">OCULAR TEST</span>
+                            <span class="event-secondary-text">Memorial Clinic Miami</span>
+                        </div>
                         <div id="event-body">
-                            <div id="event-header"></div>
+                            <span>2 JULY 2012 / </span>
+                            <span>14:30</span>
+                            <p>Lorem ipsum dolor sit amet dolorem proident utilitatis magnus agris. Abutebatur
+                                architecto propter ut materia. Quam quo aliquip, officii voluptatem</p>
+                            <div id="change-event"></div>
+                            <div id="done-event"></div>
                         </div>
                     </div>
+
                 </div>
 
 
@@ -191,7 +211,66 @@
             </div>
 
             <img src="/Responsive/images/Circle of care.png" alt="circle-of-care" class="grid" onclick="care()">
-            <img src="/Responsive/images/CARE.png" alt="circle-of-care" id="care">
+            <div id="care">
+                <div class="bar">
+                    <img src="/Responsive/images/care-logo.png" alt="calendar-icon">
+                    <span class="bar-text">CIRCLE OF CARE</span>
+                </div>
+                <div id="care-panel">
+                    <div id="care-buttons">
+                        <div class="button">FIND</div>
+                        <div class="button">MY CIRCLE OF CARE</div>
+                        <div class="button">PENDING</div>
+                    </div>
+                    <div id="my-circle">
+                        <div id="circle-instructions">
+                            For organize Drag & Drop in the groups
+                        </div>
+                        <div id="friends">
+                            <div class="red-friend">
+                                <div class="prof-pic">
+                                    <img src="/Responsive/images/peepe.jpg" alt="" class="pic">
+                                </div>
+                                <span class="name">Francis Fisher Williams</span>
+                                <span class="job">Graphic Designer</span>
+                                <div class="send-red">Send Message</div>
+                            </div>
+                            <div class="red-friend">
+                                <div class="prof-pic">
+                                    <img src="/Responsive/images/peepe.jpg" alt="" class="pic">
+                                </div>
+                                <span class="name">Dolores Vidal Taylor</span>
+                                <span class="job">Comercial</span>
+                                <div class="send-red">Send Message</div>
+                            </div>
+                            <div class="blue-friend">
+                                <div class="prof-pic">
+                                    <img src="/Responsive/images/peepe-female.jpg" alt="" class="pic">
+                                </div>
+                                <span class="name">Vanessa Herrera Simons</span>
+                                <span class="job">Nurse</span>
+                                <div class="send-blue">Send Message</div>
+                            </div>
+                            <div class="blue-friend">
+                                <div class="prof-pic">
+                                    <img src="/Responsive/images/peepe-female.jpg" alt="" class="pic">
+                                </div>
+                                <span class="name">Marie Kraft Smith</span>
+                                <span class="job">Doctor</span>
+                                <div class="send-blue">Send Message</div>
+                            </div>
+                            <div class="red-friend">
+                                <div class="prof-pic">
+                                    <img src="/Responsive/images/peepe.jpg" alt="" class="pic">
+                                </div>
+                                <span class="name">Robbie Walker Jr.</span>
+                                <span class="job">CEO NY Memorial</span>
+                                <div class="send-red">Send Message</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <img src="/Responsive/images/My daily care-o-gram.png" alt="care-program" class="grid">
             <img src="/Responsive/images/Repository.png" alt="repository" class="grid">
             <img src="/Responsive/images/Reports.png" alt="reports" class="grid">
