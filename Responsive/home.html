@@ -32,7 +32,7 @@
             <img src="/Responsive/images/My alerts.png" alt="alerts" class="grid" onclick="messaging()">
             <div id="messaging">
                 <div class="bar">
-                    <img src="/Responsive/images/messaging-logo.png" alt="messaging-icon">
+                    <img src="/Responsive/images/messaging-logo.png" alt="messaging-icon" class="bar-icon">
                     <span class="bar-text">ALERTS AND MESSAGING</span>
                 </div>
                 <div id="messaging-panel">
@@ -124,88 +124,91 @@
             <img src="/Responsive/images/My calendar.png" alt="calendar" class="grid" onclick="calendar()">
             <div id="reminders-calendar">
                 <div class="bar">
-                    <img src="/Responsive/images/calendar-logo.png" alt="calendar-icon">
+                    <img src="/Responsive/images/calendar-logo.png" alt="calendar-icon" class="bar-icon">
                     <span class="bar-text">REMINDERS CALENDAR</span>
                 </div>
-                <div id="reminders">
-                    <div id="today">
-                        <span>TODAY</span>
-                    </div>
-                    <div id="current-date">2 JULY/MONDAY</div>
-                    <div class="event">
-                        <div><img src="/Responsive/images/phone-icon.png" alt="phone-icon" class="event-icon"></div>
-                        <span class="event-main-text">Call Dr.Smith</span>
-                        <br>
-                        <span class="event-secondary-text">675 557 890</span>
-                    </div>
-                    <div id="event-info">
-                        <div id="event-header">
-                            <div><img src="/Responsive/images/calendar-icon.png" alt="calendar-icon" class="event-icon">
+                <div id="reminders-panel">
+                    <div id="reminders">
+                        <div id="today">
+                            <span>TODAY</span>
+                        </div>
+                        <div id="current-date">2 JULY / MONDAY</div>
+                        <div class="event">
+                            <div><img src="/Responsive/images/phone-icon.png" alt="phone-icon" class="event-icon"></div>
+                            <span id="phone-main-text">Call Dr.Smith</span>
+                            <br>
+                            <span id="phone-secondary-text">675 557 890</span>
+                        </div>
+                        <div id="event-info">
+                            <div id="event-header">
+                                <div><img src="/Responsive/images/calendar-icon.png" alt="calendar-icon"
+                                        class="event-icon">
+                                </div>
+                                <span id="calendar-main-text">Ocular Test</span>
+                                <span id="calendar-secondary-text">Memorial Clinic Miami</span>
                             </div>
-                            <span class="event-main-text">OCULAR TEST</span>
-                            <span class="event-secondary-text">Memorial Clinic Miami</span>
+                            <div id="event-body">
+                                <span>2 JULY 2012 / </span>
+                                <span>14:30</span>
+                                <p>Lorem ipsum dolor sit amet dolorem proident utilitatis magnus agris. Abutebatur
+                                    architecto propter ut materia. Quam quo aliquip, officii voluptatem</p>
+                                <div id="change-event"><span id="change-event-text">CHANGE</span></div>
+                                <div id="done-event"><span id="done-event-text">DONE</span></div>
+                            </div>
                         </div>
-                        <div id="event-body">
-                            <span>2 JULY 2012 / </span>
-                            <span>14:30</span>
-                            <p>Lorem ipsum dolor sit amet dolorem proident utilitatis magnus agris. Abutebatur
-                                architecto propter ut materia. Quam quo aliquip, officii voluptatem</p>
-                            <div id="change-event"></div>
-                            <div id="done-event"></div>
+
+                    </div>
+
+
+                    <div id="calendar">
+                        <div id="month">
+                            <img src="/Responsive/images/arrow_left.png" alt="" class="arrow">
+                            <span>MAY 2022</span>
+                            <img src="/Responsive/images/arrow.png" alt="" class="arrow">
                         </div>
-                    </div>
-
-                </div>
-
-
-                <div id="calendar">
-                    <div id="month">
-                        <img src="/Responsive/images/arrow_left.png" alt="" class="arrow">
-                        <span>MAY 2022</span>
-                        <img src="/Responsive/images/arrow.png" alt="" class="arrow">
-                    </div>
-                    <div id="month"></div>
-                    <div id="day">
-                        <div>S</div>
-                        <div>M</div>
-                        <div>T</div>
-                        <div>W</div>
-                        <div>T</div>
-                        <div>F</div>
-                        <div>S</div>
-                    </div>
-                    <div id="date-grid">
-                        <button><time datetime="2022-05-01">1</time></button>
-                        <button><time datetime="2022-05-02">2</time></button>
-                        <button><time datetime="2022-05-03">3</time></button>
-                        <button><time datetime="2022-05-04">4</time></button>
-                        <button><time datetime="2022-05-05">5</time></button>
-                        <button><time datetime="2022-05-06">6</time></button>
-                        <button><time datetime="2022-05-07">7</time></button>
-                        <button><time datetime="2022-05-08">8</time></button>
-                        <button><time datetime="2022-05-09">9</time></button>
-                        <button><time datetime="2022-05-10">10</time></button>
-                        <button><time datetime="2022-05-11">11</time></button>
-                        <button><time datetime="2022-05-12">12</time></button>
-                        <button><time datetime="2022-05-13">13</time></button>
-                        <button><time datetime="2022-05-14">14</time></button>
-                        <button><time datetime="2022-05-15">15</time></button>
-                        <button><time datetime="2022-05-16">16</time></button>
-                        <button><time datetime="2022-05-17">17</time></button>
-                        <button><time datetime="2022-05-18">18</time></button>
-                        <button><time datetime="2022-05-19">19</time></button>
-                        <button><time datetime="2022-05-20">20</time></button>
-                        <button><time datetime="2022-05-21">21</time></button>
-                        <button><time datetime="2022-05-22">22</time></button>
-                        <button><time datetime="2022-05-23">23</time></button>
-                        <button><time datetime="2022-05-24">24</time></button>
-                        <button><time datetime="2022-05-25">25</time></button>
-                        <button><time datetime="2022-05-26">26</time></button>
-                        <button><time datetime="2022-05-27">27</time></button>
-                        <button><time datetime="2022-05-28">28</time></button>
-                        <button><time datetime="2022-05-29">29</time></button>
-                        <button><time datetime="2022-05-30">30</time></button>
-                        <button><time datetime="2022-05-31">31</time></button>
+                        <div id="month"></div>
+                        <div id="day">
+                            <div>S</div>
+                            <div>M</div>
+                            <div>T</div>
+                            <div>W</div>
+                            <div>T</div>
+                            <div>F</div>
+                            <div>S</div>
+                        </div>
+                        <div id="date-grid">
+                            <button><time datetime="2022-05-01">1</time></button>
+                            <button><time datetime="2022-05-02">2</time></button>
+                            <button><time datetime="2022-05-03">3</time></button>
+                            <button><time datetime="2022-05-04">4</time></button>
+                            <button><time datetime="2022-05-05">5</time></button>
+                            <button><time datetime="2022-05-06">6</time></button>
+                            <button><time datetime="2022-05-07">7</time></button>
+                            <button><time datetime="2022-05-08">8</time></button>
+                            <button><time datetime="2022-05-09">9</time></button>
+                            <button><time datetime="2022-05-10">10</time></button>
+                            <button><time datetime="2022-05-11">11</time></button>
+                            <button><time datetime="2022-05-12">12</time></button>
+                            <button><time datetime="2022-05-13">13</time></button>
+                            <button><time datetime="2022-05-14">14</time></button>
+                            <button><time datetime="2022-05-15">15</time></button>
+                            <button><time datetime="2022-05-16">16</time></button>
+                            <button><time datetime="2022-05-17">17</time></button>
+                            <button><time datetime="2022-05-18">18</time></button>
+                            <button><time datetime="2022-05-19">19</time></button>
+                            <button><time datetime="2022-05-20">20</time></button>
+                            <button><time datetime="2022-05-21">21</time></button>
+                            <button><time datetime="2022-05-22">22</time></button>
+                            <button><time datetime="2022-05-23">23</time></button>
+                            <button><time datetime="2022-05-24">24</time></button>
+                            <button><time datetime="2022-05-25">25</time></button>
+                            <button><time datetime="2022-05-26">26</time></button>
+                            <button><time datetime="2022-05-27">27</time></button>
+                            <button><time datetime="2022-05-28">28</time></button>
+                            <button><time datetime="2022-05-29">29</time></button>
+                            <button><time datetime="2022-05-30">30</time></button>
+                            <button><time datetime="2022-05-31">31</time></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -213,7 +216,7 @@
             <img src="/Responsive/images/Circle of care.png" alt="circle-of-care" class="grid" onclick="care()">
             <div id="care">
                 <div class="bar">
-                    <img src="/Responsive/images/care-logo.png" alt="calendar-icon">
+                    <img src="/Responsive/images/care-logo.png" alt="calendar-icon" class="bar-icon">
                     <span class="bar-text">CIRCLE OF CARE</span>
                 </div>
                 <div id="care-panel">
@@ -229,7 +232,7 @@
                         <div id="friends">
                             <div class="red-friend">
                                 <div class="prof-pic">
-                                    <img src="/Responsive/images/peepe.jpg" alt="" class="pic">
+                                    <img src="/Responsive/images/prof-Francis.jpg" alt="" class="pic">
                                 </div>
                                 <span class="name">Francis Fisher Williams</span>
                                 <span class="job">Graphic Designer</span>

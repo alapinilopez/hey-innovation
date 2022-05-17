@@ -106,20 +106,31 @@ main {
     font-weight: bold;
 }
 
+.bar {
+    background-color: #dfe0e5;
+    height: 40px;
+    max-width: 100%;
+}
+
+.bar-icon {
+    display: block;
+    position: absolute;
+    top: 0.5%;
+    left: 3%;
+    height: 35px;
+    width: auto;
+}
+
 .bar-text {
-    position: relative;
+    display: block;
+    position: absolute;
+    top: 2.5%;
+    left: 9%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: #868686;
-    padding: 2%;
-    bottom: 25%;
 }
 
-.bar {
-    background-color: #dfe0e5;
-    height: 60px;
-    max-width: 100%;
-}
 
 #messaging {
     display: none;
@@ -285,15 +296,13 @@ main {
     background-color: #fcfcfe;
     border: 1px solid #c2cbd0;
     width: 80%; 
-    height: fit-content;  
+    height: 400px;  
 }
 
 #reminders {
-    background-color: white;
     position: relative;
     padding: 3%;
-    bottom: 10%;
-    margin: auto;
+    left: 1%;
     height: 225px;
     width: 40%;
 }
@@ -318,44 +327,129 @@ main {
 }
 
 .event {
-    display: flex;
-    background-color: red;
+    display: block;
+    position: absolute;
+    background-color: #ff503d;
     font-family: Arial, Helvetica, sans-serif;
-    align-items: flex-start;
+    font-size: 16px;
+    width: 60%;
+    height: 10%;
     color: white;
+    left: 15%;
     margin: 1%;
     padding: 3%;
 }
 
 .event-icon {
+    position: absolute;
     height: 30px;
     max-width: 100%;
 }
 
-#event-info {
-
+#phone-main-text {
+    position: absolute;
+    left: 22%;
 }
 
+#phone-secondary-text {
+    position: absolute;
+    left: 22%;
+    font-size: 14px;
+}
+
+#calendar-main-text {
+    position: absolute;
+    left: 22%;
+}
+
+#calendar-secondary-text {
+    position: absolute;
+    bottom: 16%;
+    left: 22%;
+    font-size: 14px;
+}
+
+/* #event-info {
+
+} */
+
 #event-header {
-    display: flex;
-    background-color: red;
+    display: block;
+    position: absolute;
+    background-color: #ff503d;
     font-family: Arial, Helvetica, sans-serif;
-    align-items: flex-start;
+    font-size: 16px;
+    width: 60%;
+    height: 10%;
     color: white;
+    left: 15%;
+    top: 50%;
     margin: 1%;
     padding: 3%;
 }
 
 #event-body {
-    display: flex;
+    display: block;
+    position: absolute;
+    height: 55%;
+    width: 60%;
     background-color: #e4e4e6;
+    top: 68%;
+    left: 15%;
     margin: 1%;
     padding: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #535355;
+}
+
+#change-event {
+    position: absolute;
+    left: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    color: #047f7c;
+    background-color: #00dabf;
+    height: 25px;
+    width: 70px;
+}
+
+#change-event-text {
+    position: absolute;
+    margin: 8%;
+    left: 5%;
+    font-family: inherit;
+    font-size: inherit;   
+}
+
+#done-event-text {
+    position: absolute;
+    margin: 8%;
+    left: 16%;
+    font-family: inherit;
+    font-size: inherit;   
+}
+
+#done-event {
+    position: absolute;
+    right: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    color: #f6ffff;
+    background-color: #fd4e3d;
+    height: 25px;
+    width: 70px;
 }
 
 #calendar {
-    position: relative;
-    left: 25%;
+    position: absolute;
+    right: 1%;
+    top: 4%;
+    right: 15%;
     padding: 3%;
     margin: auto;
     width: 40%;
@@ -379,7 +473,7 @@ main {
     background-color: #00dabf;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     color: #525e5a;
     padding: 1%;
 }
@@ -390,6 +484,7 @@ main {
     width: 4.5ch;
     height: 4.5ch;
     border-radius: 50%;
+    font-size: 18px;
     color: #9e9e9e;
     background-color: transparent;
   }
