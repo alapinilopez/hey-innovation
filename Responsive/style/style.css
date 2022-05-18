@@ -290,8 +290,9 @@ main {
 
 #reminders-panel {
     position: relative;
-    display: flex;
-    flex: row;
+    display: grid;
+    grid-template-columns: repeat(2, 100%);
+    grid-gap: 10px;
     margin: 1%;
     background-color: #fcfcfe;
     border: 1px solid #c2cbd0;
@@ -513,18 +514,19 @@ main {
 #care-panel {
     display: block;
     border: 1px solid #dcdddf;
+     background-color: #f8f7f5;
     margin: 1%;
-    width: 80%;
+    max-width: 700px;
     left: auto;
     right: auto;
     font-size: 0;
 }
 
 #care-buttons {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     height: 20%;
-    align-content: space-between;
+    border-bottom: 1px solid #dcdddf;
 }
 
 #my-circle {
@@ -532,11 +534,13 @@ main {
     position: relative;
     width: 80%;
     height: 100%;
-    background-color: #f9f3f3;
 }
 
 #circle-instructions {
     display: block;
+    position: absolute;
+    top: 2%;
+    left: 36.5%;
     background-color: #e4e3e1;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -548,19 +552,21 @@ main {
 }
 
 #friends {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 80%);
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
     width: 80%;
     height: 500px;
-    background-color: #f8f7f5;
 }
 
 .red-friend {
     position: relative;
-    margin: auto;
     display: block;
-    width: 40%;
-    height: 20%;
+    width: 200px;
+    height: 105px;
+    left: 20%;
+    top: 20%;
     background-color: white;
     border-left: 10px solid #ff4c38;
     border-right: 1px solid #dbd9da;
@@ -583,10 +589,11 @@ main {
 
 .blue-friend {
     position: relative;
-    margin: auto;
     display: block;
-    width: 40%;
-    height: 20%;
+    width: 200px;
+    height: 105px;
+    left: 20%;
+    top: 20%;
     background-color: white;
     border-left: 10px solid #00dabf;
     border-right: 1px solid #dbd9da;
@@ -609,13 +616,13 @@ main {
 
 .prof-pic {
     position: absolute;
-    left: 10%;
-    top: 25%;
+    left: 8%;
+    top: 30%;
     background: transparent;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    border: 5px solid #a7a9a8;
+    border: 5px solid #e6e6e6;
 }
 
 .pic {
@@ -626,7 +633,7 @@ main {
 
 .name {
     position: absolute;
-    right: 10%;
+    right: 8%;
     top: 7%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -636,7 +643,7 @@ main {
 
 .job {
     position: absolute;
-    right: 10%;
+    right: 8%;
     top: 25%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -766,7 +773,7 @@ main {
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 375px){
     html, main {
         overflow-x: hidden;    
     }
@@ -816,5 +823,33 @@ main {
         max-width: 100%;
         max-height: auto;
     }
+
+    .bar-text {
+        top: 1.5%;
+        left: 15%;
+    }
+
+    #care-panel {
+        width: 90%;
+        height: 750px;
+    }
+
+    #circle-instructions {
+        display: none;
+    }
+    
+    #reminders-panel {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    #care-buttons {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    height: 20%;
+    }
+
+    #friends {
+        grid-template-columns: repeat(1, auto);
+    }    
 }
 
