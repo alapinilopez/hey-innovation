@@ -36,8 +36,8 @@ main {
 
 .notification {
     position: absolute;
-    top: 9%;
-    right: 37%;
+    top: 11.7%;
+    right: 20%;
     background-color: #ff5033;
     height: 25px;
     width: 25px;
@@ -169,10 +169,23 @@ main {
     font-size: 0;
 }
 
+#mail-buttons {
+    border: 1px solid #dcdddf;
+}
+
 
 #mail-buttons>div:first-child {
     width: 1px;
 }
+
+#mail-buttons>div:last-child {
+    position: absolute;
+    background-color: transparent;
+    right: 19%;
+    border-color: transparent;
+}
+
+
 
 
 #all-mails {
@@ -188,15 +201,13 @@ main {
 
 .button {
     background-color: white;
-    border-bottom: 1px solid;
-    border-left: 1px solid;
     border-right: 1px solid;
     border-color: #dcdddf;
     padding: 15px 30px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: #646464;
     display: inline-block;
     font-size: 16px;
 }
@@ -277,8 +288,7 @@ main {
 
 #reply-mail {
     position: relative;
-    left: 1250px;
-    bottom: -20px;
+    left: 600px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 15px;
@@ -291,8 +301,8 @@ main {
 
 #delete-mail {
     position: relative;
-    left: 1330px;
-    bottom: 10px;
+    left: 700px;
+    bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 15px;
@@ -466,7 +476,8 @@ main {
 #change-event-text {
     position: absolute;
     margin: 8%;
-    left: 5%;
+    top: 10%;
+    left: 10%;
     font-family: inherit;
     font-size: inherit;   
 }
@@ -474,7 +485,8 @@ main {
 #done-event-text {
     position: absolute;
     margin: 8%;
-    left: 16%;
+    top: 10%;
+    left: 20%;
     font-family: inherit;
     font-size: inherit;   
 }
@@ -584,7 +596,7 @@ main {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: #969897;
     display: inline-block;
     font-size: 16px;
 }
@@ -602,11 +614,6 @@ main {
 
 .circle-button:hover {
     background-color: whitesmoke;
-}
-
-.circle-button:active {
-    background-color: red;
-    color: white;
 }
 
 #my-circle {
@@ -740,6 +747,23 @@ main {
     #messaging-panel {
         width: 95%;
     }
+
+    #mail-buttons {
+    border: 1px solid #dcdddf;
+}
+
+
+#mail-buttons>div:first-child {
+    width: 1px;
+}
+
+#mail-buttons>div:last-child {
+    position: absolute;
+    background-color: transparent;
+    top: 8%;
+    right: 1.5%;
+    border-color: transparent;
+}
     
     #reminders-panel {
     position: relative;
@@ -768,6 +792,10 @@ main {
     text-align: center;
 }
 
+    #reply-mail {
+        
+    }
+
 #current-date {
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
@@ -776,8 +804,6 @@ main {
     color: #999d9e;
     text-align: center;
 }
-
-/* TODO: pasar events a px */
 
 .event {
     display: block;
@@ -821,10 +847,6 @@ main {
     left: 22%;
     font-size: 14px;
 }
-
-/* #event-info {
-
-} */
 
 #event-header {
     display: block;
@@ -978,6 +1000,11 @@ main {
     background-color: red;
     border: 2px solid #aba7a8;
 }
+
+    .notification {
+        right: 345px;
+        top: 60px;
+    }
 }
 
 @media screen and (max-width: 640px){
@@ -1037,6 +1064,28 @@ main {
         margin: auto;
         padding: 1%;
     }
+
+    #mail-buttons {
+    border: 1px solid #dcdddf;
+}
+
+
+#mail-buttons>div:first-child {
+    width: 1px;
+}
+
+#mail-buttons>div:last-child {
+    position: absolute;
+    background-color: transparent;
+    top: 10%;
+    left: 75%;
+    border-color: transparent;
+}
+
+    #search {
+        width: 90%;
+    }
+    
 }
 
 @media screen and (max-width: 414px){
@@ -1102,6 +1151,42 @@ main {
         width: fit-content;
     }
 
+    #mail-buttons {
+    border: 1px solid #dcdddf;
+}
+
+
+#mail-buttons>div:first-child {
+    width: 1px;
+}
+
+#mail-buttons>div:last-child {
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    top: 40px;
+}
+
+    #search{
+        position: relative;
+        top: 7px;
+        font-size: 10px;
+        height: 20%;
+    }
+    
+    .button {
+    background-color: white;
+    border-right: 1px solid;
+    border-color: #dcdddf;
+    padding: 13px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #646464;
+    display: inline-block;
+    font-size: 14px;
+}
+
     #received-mails {
         position: relative;
         right: 3%;
@@ -1144,6 +1229,7 @@ main {
 
 #reply-mail {
     position: relative;
+    top: 0px;
     left: 40%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -1404,6 +1490,16 @@ main {
     grid-template-columns: repeat(1, auto);
     height: 20%;
     }
+
+    .circle-button-selected {
+    display: block;
+    position: relative;
+    background-color: #fd4c38;
+    height: 10px;
+    top: 55%;
+    right: 13%;
+    width: 126%;
+}
 
     #friends {
         grid-template-columns: repeat(1, auto);
