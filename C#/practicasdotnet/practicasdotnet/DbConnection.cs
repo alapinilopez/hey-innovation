@@ -10,14 +10,10 @@ namespace practicasdotnet
     public static class DbConnection
     {
 
-        public static void Connection()
+        public static SqlConnection GetConnection()
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(cs)) {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT UsuaCODI, UsuaNom, UsuaActivo FROM Usuarios", con);
-                SqlDataReader dr = cmd.ExecuteReader();
-            }
+            return new SqlConnection(cs);
         }
     }
 }
