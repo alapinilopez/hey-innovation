@@ -33,7 +33,7 @@
         <form method="get">
             <label for="searchUser">Inserte id usuario</label>
             <input type="text" name="searchUser" value="" />
-            <input type="Submit" value="Buscar Usuario" />
+            <input type="Submit" value="Buscar Usuario" onclick="getUsuario()" />
         </form>
     </div>
     <br>
