@@ -12,20 +12,18 @@ namespace practicasdotnet
     public class Usuario
     {
 
-        public int usuaCODI;
-        public string usuaNom;
-        public int usuaActivo;
+        private int usuaCODI;
 
-        public Usuario() { } //Constructor vacio por temas de seguridad
+        public Usuario() {}
 
-        public Usuario(int usuaCODI, string usuaNom, int usuaActivo)
+        //public Usuario() { } //Constructor vacio por temas de seguridad
+
+        public Usuario(int usuaCODI)
         {
             this.usuaCODI = usuaCODI;
-            this.usuaNom = usuaNom;
-            this.usuaActivo = usuaActivo;
         }
 
-        public int getUsuario(int usuacodi)//poner int usuaCODI
+        public int GetUsuario(int usuacodi)
         {
             Usuario usuario1 = new Usuario();
             using (SqlConnection con = DbConnection.GetConnection())

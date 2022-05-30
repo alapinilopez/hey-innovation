@@ -9,11 +9,14 @@ namespace practicasdotnet
     {
         public Default() { }
 
+        public Usuario usuario1 = new Usuario();
+
         public void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 FillGV();
+                FillLabel();
             }
         }
 
@@ -32,6 +35,12 @@ namespace practicasdotnet
                     grvUsuarios.DataBind();
                 }
             }
+        }
+
+        public void FillLabel(int usuaCODI) {
+            usuario1.GetUsuario(usuaCODI);
+
+            queryResult.Text = usuario1.GetUsuario(usuaCODI) > 0 ? "Existe" : "No existe";
         }
     }
 }

@@ -33,9 +33,12 @@
         <form method="get">
             <label for="searchUser">Inserte id usuario</label>
             <input type="text" name="searchUser" value="" />
-            <input type="Submit" value="Buscar Usuario" onclick="getUsuario()" />
+            <input type="Submit" value="Buscar Usuario" onclick="Default.FillLabel()" />
+            <br />
         </form>
+        <br />
     </div>
+            <asp:label ID="queryResult" runat="server" Text="¿existe?"></asp:label>
     <br>
     <contenttemplate>
         <asp:GridView ID="grvUsuarios" runat="server" AutoGenerateColumns="False" CellPadding="4" GridLines="Horizontal" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" Width="259px">
@@ -55,7 +58,7 @@
             <SortedDescendingHeaderStyle BackColor="#275353" />
         </asp:GridView>
     </contenttemplate>
-
+    <br />
     <asp:Label ID="peticion" runat="server" Text=""></asp:Label>
 </asp:Content>
 
