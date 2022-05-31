@@ -29,7 +29,7 @@ namespace practicasdotnet
             using (SqlConnection con = DbConnection.GetConnection())
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT UsuaCODI FROM Usuarios where usuacodi = :pusuacodi", con);
+                SqlCommand cmd = new SqlCommand("SELECT UsuaCODI FROM Usuarios", con);
 
                 SqlParameter parameter = new SqlParameter();
                 parameter.ParameterName = "pusuacodi";

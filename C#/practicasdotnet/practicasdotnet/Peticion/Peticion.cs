@@ -14,16 +14,28 @@ namespace practicasdotnet
         private string petiDesc;
         private string petiFecha;
 
+
         public Peticion() { }
 
-        public Peticion getPeticion () { 
+        public string getPeticion () {
+
+            string concat = "";
 
             using (SqlConnection con = DbConnection.GetConnection())
             {
+                con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT petiCODI, petiNom, petiDesc, petiFecha, petiEstado FROM Peticion", con);
                 SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows == true)
+                {
+                    foreach (string element in dr)
+                    {
+                        concat += "<br />" + element;
+                    }
+                }
             }
-            return null;
+            return concat;
         }
     }
 }

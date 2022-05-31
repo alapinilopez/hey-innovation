@@ -10,13 +10,15 @@ namespace practicasdotnet
         public Default() { }
 
         public Usuario usuario1 = new Usuario();
+        public Peticion peti1 = new Peticion();
 
         public void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 FillGV();
-                FillLabel();
+                //FillLabel();
+                Concatenate();
             }
         }
 
@@ -41,6 +43,11 @@ namespace practicasdotnet
             usuario1.GetUsuario(usuaCODI);
 
             queryResult.Text = usuario1.GetUsuario(usuaCODI) > 0 ? "Existe" : "No existe";
+        }
+
+        public void Concatenate()
+        {
+            peti1.getPeticion();
         }
     }
 }
