@@ -32,8 +32,8 @@
     <div>
         <form method="get">
             <label for="searchUser">Inserte id usuario</label>
-            <input type="text" name="searchUser" value="" />
-            <input type="Submit" value="Buscar Usuario" onclick="FillLabel()" />
+            <asp:TextBox ID="codi" textmode="number" runat="server"></asp:TextBox>
+            <input type="Submit" value="Buscar Usuario" runat="server" onserverclick="FillLabel" />
             <br />
         </form>
         <br />

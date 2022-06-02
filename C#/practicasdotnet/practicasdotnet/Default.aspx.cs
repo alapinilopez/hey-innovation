@@ -14,12 +14,10 @@ namespace practicasdotnet
 
         public void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                FillGV();
-                //FillLabel();
-                Concatenate();
-            }
+
+            FillGV();
+            Concatenate();
+            
         }
 
         protected void FillGV()
@@ -31,7 +29,7 @@ namespace practicasdotnet
                 SqlCommand cmd = new SqlCommand("SELECT UsuaCODI, UsuaNom, UsuaActivo FROM Usuarios", con);
                 SqlDataReader dr = cmd.ExecuteReader();
 
-                if (dr.HasRows == true)
+                if (dr.HasRows)
                 {
                     grvUsuarios.DataSource = dr;
                     grvUsuarios.DataBind();
@@ -39,15 +37,16 @@ namespace practicasdotnet
             }
         }
 
-        public void FillLabel(int usuaCODI) {
-            usuario1.GetUsuario(usuaCODI);
-
-            queryResult.Text = usuario1.GetUsuario(usuaCODI) > 0 ? "Existe" : "No existe";
+        public void FillLabel(object sender, EventArgs e) {
+            if (int.TryParse(codi.Text, out int codiId))
+                queryResult.Text = usuario1.UsuarioExists(codiId) ? "Existe" : "No existe";
+            else
+                queryResult.Text = "No me mandes algo vacío porque vacío ya está mi corazón";
         }
 
         public void Concatenate()
         {
-            peti1.getPeticion();
+            peticion.Text = peti1.getPeticion();
         }
     }
 }

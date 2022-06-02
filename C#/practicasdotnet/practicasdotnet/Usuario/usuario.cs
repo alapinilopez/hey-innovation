@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -13,38 +14,32 @@ namespace practicasdotnet
     {
 
         private int usuaCODI;
+        private string usuaNom;
+        private int usuaActivo;
 
         public Usuario() {}
 
         //public Usuario() { } //Constructor vacio por temas de seguridad
 
-        public Usuario(int usuaCODI)
+        public Usuario(int usuaCODI, string usuaNom, int usuaActivo)
         {
             this.usuaCODI = usuaCODI;
+            this.usuaNom = usuaNom;
+            this.usuaActivo = usuaActivo;
         }
 
-        public int GetUsuario(int usuacodi)
+        public bool UsuarioExists(int usuaCODI)
         {
-            Usuario usuario1 = new Usuario();
             using (SqlConnection con = DbConnection.GetConnection())
             {
+
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT UsuaCODI FROM Usuarios", con);
-
-                SqlParameter parameter = new SqlParameter();
-                parameter.ParameterName = "pusuacodi";
-                parameter.SqlDbType = SqlDbType.Int;
-                parameter.Value = usuacodi;
-                cmd.Parameters.Add(parameter);
-
-                SqlDataReader dr = cmd.ExecuteReader();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(1) FROM Usuarios where usuaCODI = " + usuaCODI;
+                return (int)cmd.ExecuteScalar() == 1;
                 
-                if (dr.HasRows == true)
-                {
-                    usuario1.usuaCODI = dr.GetInt32(0);
-                } 
             }
-            return usuario1.usuaCODI;
+
         }
     }
 }

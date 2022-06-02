@@ -7,32 +7,36 @@ using System.Data.SqlClient;
 
 namespace practicasdotnet
 {
-    public class Peticion {
+    public class Peticion
+    {
 
         private int petiCODI;
         private string petiNom;
         private string petiDesc;
         private string petiFecha;
+        private string petiEstado;
 
 
         public Peticion() { }
 
-        public string getPeticion () {
+        public string getPeticion()
+        {
 
+            string space = " ";
             string concat = "";
 
             using (SqlConnection con = DbConnection.GetConnection())
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT petiCODI, petiNom, petiDesc, petiFecha, petiEstado FROM Peticion", con);
+                SqlCommand cmd = new SqlCommand("SELECT petiCODI, petiNom, petiDesc, petiFecha, petiEstado FROM Peticiones", con);
                 SqlDataReader dr = cmd.ExecuteReader();
 
-                if (dr.HasRows == true)
+                while (dr.Read())
                 {
-                    foreach (string element in dr)
-                    {
-                        concat += "<br />" + element;
-                    }
+                    
+                    concat += " <br />" + dr.GetInt32(0).ToString() + space + dr.GetString(1) + space + dr.GetString(2) + space + dr.GetDateTime(3).ToString() + space + dr.GetInt32(4).ToString();
+                    Console.WriteLine(concat);
+  
                 }
             }
             return concat;
