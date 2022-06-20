@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <input id="queryAll" type="button" value="Items" onclick="XMLQuery()"/>
+    <br />
+    <select>
+        <option value="">Orden</option>
+        <option value="priceLess">Precio menor a mayor</option>
+        <option value="priceGreater">Precio mayor a menor</option>
+        <option value="nameA">Nombre A-Z</option>
+        <option value="nameZ">Nombre Z-A</option>
+    </select>
+    <input id="OrdenButton" type="button" value="Filtrar" />
+
+</div>
+<div class="items">
+    
+</div>
